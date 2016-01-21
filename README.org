@@ -3,11 +3,18 @@
 
 一個可以參考的專案是 paredit.js ，如果將它所使用的 ace editor 換成具有 richtext / collaborative edit 的元件，那麼就很有搞頭了…
 
+然而從另一個角度來看，因為行為和本地端的文字編輯器已經有所不同，因此改寫的部分可能會沒有現成的套件、文件供參
+
 * emacs.js
 嘗試以 javascript 改寫 emacs ，並且以 nodejs 執行
 
 此一專案是嘗試儘量貼近 emacs 本身的原有功能，以本地端檔案操作為主，以便驗證改寫的功能
 
+** building emacs
+http://www.gnu.org/software/emacs/manual/html_node/elisp/Building-Emacs.html
+上述連結詳細說明建置 emacs 的過程
+https://www.emacswiki.org/emacs/BuildingEmacs
+上述連結簡略說明建置 emacs 的過程
 * elisp4js
 嘗試以 javascript 改寫 lisp interpreter ，並且以 nodejs 執行
 
