@@ -1,46 +1,99 @@
-* emacs2wb
-嘗試將 emacs 放到瀏覽器中執行，並且連結雲端的檔案
+* Project emacgelion (Mandarin)
+** emacs2wb
+ 嘗試將 emacs 放到瀏覽器中執行，並且連結雲端的檔案
 
-一個可以參考的專案是 paredit.js ，如果將它所使用的 ace editor 換成具有 richtext / collaborative edit 的元件，那麼就很有搞頭了…
+ 一個可以參考的專案是 paredit.js ，如果將它所使用的 ace editor 換成具有 richtext / collaborative edit 的元件，那麼就很有搞頭了… (不過 paredit 仍然不是一個 interpreter ，此功能交由下述子專案 elisp4js 來執行 )
 
-然而從另一個角度來看，因為行為和本地端的文字編輯器已經有所不同，因此改寫的部分可能會沒有現成的套件、文件供參
+ 然而從另一個角度來看，因為行為和本地端的文字編輯器已經有所不同，因此改寫的部分可能會沒有現成的套件、文件供參
 
-初期的目標是以能顯示、執行 org mode 相關功能為主
+ 初期的目標是以能顯示、執行 org mode 相關功能為主
 
-** ymacs @ http://www.ymacs.org/
-這幾乎是成品了吧我想。
+*** ymacs @ http://www.ymacs.org/
+ 這幾乎是成品了吧我想。
 
-* emacs.js
-嘗試以 javascript 改寫 emacs ，並且以 nodejs 執行
+** emacs.js
+ 嘗試以 javascript 改寫 emacs ，並且以 nodejs 執行
 
-此一專案是嘗試儘量貼近 emacs 本身的原有功能，以本地端檔案操作為主，以便驗證改寫的功能
+ 此一專案是嘗試儘量貼近 emacs 本身的原有功能，以本地端檔案操作為主，以便驗證改寫的功能
 
-為完成上述之任務，必需了解 emacs 的原始碼、建置過程、啟動過程
+ 為完成上述之任務，必需了解 emacs 的原始碼、建置過程、啟動過程
 
-** bookmark+
-這個 org mode 的功能非常之好，讓我可以找到3年前寫的註解所指向的原始碼
+*** bookmark+
+ 這個 org mode 的功能非常之好，讓我可以找到3年前寫的註解所指向的原始碼
 
-** building emacs
-http://www.gnu.org/software/emacs/manual/html_node/elisp/Building-Emacs.html
+*** building emacs
+ http://www.gnu.org/software/emacs/manual/html_node/elisp/Building-Emacs.html
 
-上述連結詳細說明建置 emacs 的過程
+ 上述連結詳細說明建置 emacs 的過程
 
-https://www.emacswiki.org/emacs/BuildingEmacs
+ https://www.emacswiki.org/emacs/BuildingEmacs
 
-上述連結簡略說明建置 emacs 的過程
+ 上述連結簡略說明建置 emacs 的過程
 
-** Starting Up Emacs
-http://www.gnu.org/software/emacs/manual/html_node/elisp/Startup-Summary.html#Startup-Summary
+*** Starting Up Emacs
+ http://www.gnu.org/software/emacs/manual/html_node/elisp/Startup-Summary.html#Startup-Summary
 
-emacs 的啟動流程，這在選擇性的實作 emacs 時很重要，才能知道該實作那些部分
+ emacs 的啟動流程，這在選擇性的實作 emacs 時很重要，才能知道該實作那些部分
 
-* elisp4js
-嘗試以 javascript 改寫 lisp interpreter ，並且以 nodejs 執行
+** elisp4js
+ 嘗試以 javascript 改寫 lisp interpreter ，並且以 nodejs 執行
 
-此一專案為最基本的工作，必需能寫出取代 temacs 的程式，才有機會完成上述的兩個專案
+ 此一專案為最基本的工作，必需能寫出取代 temacs 的程式，才有機會完成上述的兩個專案
 
-** samsonjs/elisp.js @ github
-這位作者很規矩地遵守了 MIT license， 也有有寫出他的思路和步驟，而且特別提到了 ymacs
+*** samsonjs/elisp.js @ github
+ 這位作者很規矩地遵守了 MIT license， 也有有寫出他的思路和步驟，而且特別提到了 ymacs
 
-** nicferrier/emacs-ejit @ github
-這裏面作者有寫出他的思路和步驟
+*** nicferrier/emacs-ejit @ github
+ 這裏面作者有寫出他的思路和步驟
+* Project emacgelion (English)
+** emacs2wb
+ run emacs in a web browser, linking files in cloud storages
+
+ would be desirable if we can employ a richtext / collaborative editor
+
+ on the other hand, owing to the fundamental difference against the authentic Emacs, there may not be many documents
+
+ the first milestone would be to display and run org mode correctly
+
+*** ymacs @ http://www.ymacs.org/
+ a good start.
+
+** emacs.js
+ rewrite emacs with javascript and run with node.js (kinda like atom)
+
+ this subproject would try to mimic the authentic Emacs as much as possible.
+
+ will operate on local storage, thus validating against the authentic Emacs 
+
+ to do so, it would be mandatory to understand the authentic Emacs's source code, build process and startup process
+
+*** bookmark+
+
+ will use bookmark+ of org mode to facilitate code comment / navigation
+
+*** building emacs
+ http://www.gnu.org/software/emacs/manual/html_node/elisp/Building-Emacs.html
+
+ the steps involved in building the Emacs executable.
+
+ https://www.emacswiki.org/emacs/BuildingEmacs
+
+ a brief summary of the basic steps 
+
+*** Starting Up Emacs
+ http://www.gnu.org/software/emacs/manual/html_node/elisp/Startup-Summary.html#Startup-Summary
+
+ Summary: Sequence of Actions at Startup 
+
+ important while selectively implementing emacs, to know which parts are mandatory
+
+** elisp4js
+ rewriting lisp interpreter with javascript, and run with nodejs
+
+ it's the most basic task; ultimately a replacement of native temacs will be built
+
+*** samsonjs/elisp.js @ github
+ MIT licensed and well documented strategies, and referring to ymacs
+
+*** nicferrier/emacs-ejit @ github
+ well documented strategies
