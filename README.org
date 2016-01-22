@@ -1,52 +1,69 @@
-* Project emacgelion (Mandarin)
+* Project Emacgelion (ä¸­æ–‡)
 
 ** 1. emacs.js @ https://github.com/jawatech/emacs.js
- - ¹Á¸Õ¥H javascript §ï¼g emacs ¡A¨Ã¥B¥H nodejs °õ¦æ
+ - å˜—è©¦ä»¥ javascript æ”¹å¯« emacs ï¼Œä¸¦ä¸”ä»¥ nodejs åŸ·è¡Œ
 
- - ¦¹¤@±M®×¬O¹Á¸Õ¾¨¶q¶Kªñ emacs ¥»¨­ªº­ì¦³¥\¯à¡A¥H¥»¦aºİÀÉ®×¾Ş§@¬°¥D¡A¥H«KÅçÃÒ§ï¼gªº¥\¯à
+ - æ­¤ä¸€å°ˆæ¡ˆæ˜¯å˜—è©¦å„˜é‡è²¼è¿‘ emacs æœ¬èº«çš„åŸæœ‰åŠŸèƒ½ï¼Œä»¥æœ¬åœ°ç«¯æª”æ¡ˆæ“ä½œç‚ºä¸»ï¼Œä»¥ä¾¿é©—è­‰æ”¹å¯«çš„åŠŸèƒ½
 
- - ¬°§¹¦¨¤W­z¤§¥ô°È¡A¥²»İ¤F¸Ñ emacs ªº­ì©l½X¡B«Ø¸m¹Lµ{¡B±Ò°Ê¹Lµ{
+ - ç‚ºå®Œæˆä¸Šè¿°ä¹‹ä»»å‹™ï¼Œå¿…éœ€äº†è§£ emacs çš„åŸå§‹ç¢¼ã€å»ºç½®éç¨‹ã€å•Ÿå‹•éç¨‹
 
 *** building emacs
  - http://www.gnu.org/software/emacs/manual/html_node/elisp/Building-Emacs.html
 
- - ¤W­z³sµ²¸Ô²Ó»¡©ú«Ø¸m emacs ªº¹Lµ{
+   - ä¸Šè¿°é€£çµè©³ç´°èªªæ˜å»ºç½® emacs çš„éç¨‹
 
  - https://www.emacswiki.org/emacs/BuildingEmacs
 
- - ¤W­z³sµ²Â²²¤»¡©ú«Ø¸m emacs ªº¹Lµ{
+   - ä¸Šè¿°é€£çµç°¡ç•¥èªªæ˜å»ºç½® emacs çš„éç¨‹
+
+**** å–å¾— emacs åŸå§‹ç¢¼ @ http://ftpmirror.gnu.org/emacs/
+ä»¥ä¸‹ä»¥ emacs 24.5 ç‚ºä¾‹
+***** è§£å£“æŒ‡ä»¤ tar zxvf emacs-24.5.tar.gz
+åƒ http://blog.gtwang.org/linux/linux-why-are-tar-archive-formats-switching-to-xz-compression-to-replace-bzip2-and-what-about-gzip/
+**** Ubuntuå®‰è£…Emacså‡ºç°åˆ°ä¾èµ–é—®é¢˜åŠè§£å†³æ–¹æ¡ˆ
+sudo apt-get install libgif-dev
+
+åƒè€ƒ http://www.linuxidc.com/Linux/2014-08/104975.htm
+**** åŸ·è¡Œæ­¥é©Ÿ
+   $ ./configure
+   $ make
+   $ sudo make install prefix=/usr/local/stow/emacs
+   $ cd /usr/local/stow
+   $ stow emacs
+***** ä½¿ç”¨ stow ä¾†å®‰è£å¤šå€‹ç‰ˆæœ¬çš„ emacs @ http://www.gnu.org/software/stow/
+ èªªæ˜ http://www.gnu.org/software/stow/manual/stow.html
 
 *** Starting Up Emacs
  http://www.gnu.org/software/emacs/manual/html_node/elisp/Startup-Summary.html#Startup-Summary
 
- emacs ªº±Ò°Ê¬yµ{¡A³o¦b¿ï¾Ü©Êªº¹ê§@ emacs ®É«Ü­«­n¡A¤~¯àª¾¹D¸Ó¹ê§@¨º¨Ç³¡¤À
+ emacs çš„å•Ÿå‹•æµç¨‹ï¼Œé€™åœ¨é¸æ“‡æ€§çš„å¯¦ä½œ emacs æ™‚å¾ˆé‡è¦ï¼Œæ‰èƒ½çŸ¥é“è©²å¯¦ä½œé‚£äº›éƒ¨åˆ†
 
 ** 2. elisp4js @ https://github.com/jawatech/elisp4js
- - ¹Á¸Õ¥H javascript §ï¼g lisp interpreter ¡A¨Ã¥B¥H nodejs °õ¦æ
+ - å˜—è©¦ä»¥ javascript æ”¹å¯« lisp interpreter ï¼Œä¸¦ä¸”ä»¥ nodejs åŸ·è¡Œ
 
- - ¦¹¤@±M®×¬°³Ì°ò¥»ªº¤u§@¡A¥²»İ¯à¼g¥X¨ú¥N temacs ªºµ{¦¡¡A¤~¦³¾÷·|§¹¦¨¤W­zªº¨â­Ó±M®×
+ - æ­¤ä¸€å°ˆæ¡ˆç‚ºæœ€åŸºæœ¬çš„å·¥ä½œï¼Œå¿…éœ€èƒ½å¯«å‡ºå–ä»£ temacs çš„ç¨‹å¼ï¼Œæ‰æœ‰æ©Ÿæœƒå®Œæˆä¸Šè¿°çš„å…©å€‹å°ˆæ¡ˆ
 
 *** samsonjs/elisp.js @ github
- ³o¦ì§@ªÌ«Ü³W¯x¦a¿í¦u¤F MIT license¡A ¤]¦³¦³¼g¥X¥Lªº«ä¸ô©M¨BÆJ¡A¦Ó¥B¯S§O´£¨ì¤F ymacs
+ é€™ä½ä½œè€…å¾ˆè¦çŸ©åœ°éµå®ˆäº† MIT licenseï¼Œ ä¹Ÿæœ‰æœ‰å¯«å‡ºä»–çš„æ€è·¯å’Œæ­¥é©Ÿï¼Œè€Œä¸”ç‰¹åˆ¥æåˆ°äº† ymacs
 
 *** nicferrier/emacs-ejit @ github
- ³oùØ­±§@ªÌ¦³¼g¥X¥Lªº«ä¸ô©M¨BÆJ
+ é€™è£é¢ä½œè€…æœ‰å¯«å‡ºä»–çš„æ€è·¯å’Œæ­¥é©Ÿ
 ** 3. emacs2wb @ https://github.com/jawatech/emacs2wb
- - ¹Á¸Õ±N emacs ©ñ¨ìÂsÄı¾¹¤¤°õ¦æ¡A¨Ã¥B³sµ²¶³ºİªºÀÉ®×
+ - å˜—è©¦å°‡ emacs æ”¾åˆ°ç€è¦½å™¨ä¸­åŸ·è¡Œï¼Œä¸¦ä¸”é€£çµé›²ç«¯çš„æª”æ¡ˆ
 
- - ¤@­Ó¥i¥H°Ñ¦Òªº±M®×¬O paredit.js ¡A¦pªG±N¥¦©Ò¨Ï¥Îªº ace editor ´«¦¨¨ã¦³ richtext / collaborative edit ªº¤¸¥ó¡A¨º»ò´N«Ü¦³·dÀY¤F¡K (¤£¹L paredit ¤´µM¤£¬O¤@­Ó interpreter ¡A¦¹¥\¯à¥æ¥Ñ¤U­z¤l±M®× elisp4js ¨Ó°õ¦æ )
+ - ä¸€å€‹å¯ä»¥åƒè€ƒçš„å°ˆæ¡ˆæ˜¯ paredit.js ï¼Œå¦‚æœå°‡å®ƒæ‰€ä½¿ç”¨çš„ ace editor æ›æˆå…·æœ‰ richtext / collaborative edit çš„å…ƒä»¶ï¼Œé‚£éº¼å°±å¾ˆæœ‰æé ­äº†â€¦ (ä¸é paredit ä»ç„¶ä¸æ˜¯ä¸€å€‹ interpreter ï¼Œæ­¤åŠŸèƒ½äº¤ç”±ä¸‹è¿°å­å°ˆæ¡ˆ elisp4js ä¾†åŸ·è¡Œ )
 
- - µM¦Ó±q¥t¤@­Ó¨¤«×¨Ó¬İ¡A¦]¬°¦æ¬°©M¥»¦aºİªº¤å¦r½s¿è¾¹¤w¸g¦³©Ò¤£¦P¡A¦]¦¹§ï¼gªº³¡¤À¥i¯à·|¨S¦³²{¦¨ªº®M¥ó¡B¤å¥ó¨Ñ°Ñ
+ - ç„¶è€Œå¾å¦ä¸€å€‹è§’åº¦ä¾†çœ‹ï¼Œå› ç‚ºè¡Œç‚ºå’Œæœ¬åœ°ç«¯çš„æ–‡å­—ç·¨è¼¯å™¨å·²ç¶“æœ‰æ‰€ä¸åŒï¼Œå› æ­¤æ”¹å¯«çš„éƒ¨åˆ†å¯èƒ½æœƒæ²’æœ‰ç¾æˆçš„å¥—ä»¶ã€æ–‡ä»¶ä¾›åƒ
 
- - ªì´Áªº¥Ø¼Ğ¬O¥H¯àÅã¥Ü¡B°õ¦æ org mode ¬ÛÃö¥\¯à¬°¥D
+ - åˆæœŸçš„ç›®æ¨™æ˜¯ä»¥èƒ½é¡¯ç¤ºã€åŸ·è¡Œ org mode ç›¸é—œåŠŸèƒ½ç‚ºä¸»
 
 *** ymacs @ http://www.ymacs.org/
- ³o´X¥G¬O¦¨«~¤F§a§Ú·Q¡C
-** 4. ¨Ï¥Îªº¤u¨ã
+ é€™å¹¾ä¹æ˜¯æˆå“äº†å§æˆ‘æƒ³ã€‚
+** 4. ä½¿ç”¨çš„å·¥å…·
 *** bookmark+
- ³o­Ó org mode ªº¥~±¾¡A¥\¯à«D±`¤§¦n¡AÅı§Ú¥i¥H§ä¨ì3¦~«e¼gªºµù¸Ñ©Ò«ü¦Vªº­ì©l½X
+ é€™å€‹ org mode çš„å¤–æ›ï¼ŒåŠŸèƒ½éå¸¸ä¹‹å¥½ï¼Œè®“æˆ‘å¯ä»¥æ‰¾åˆ°3å¹´å‰å¯«çš„è¨»è§£æ‰€æŒ‡å‘çš„åŸå§‹ç¢¼
 
-* Project emacgelion (English)
+* Project Emacgelion (English)
 
 ** 1. emacs.js @ https://github.com/jawatech/emacs.js
  - rewrite emacs with javascript and run with node.js (kinda like atom)
@@ -60,11 +77,13 @@
 *** building emacs
  - http://www.gnu.org/software/emacs/manual/html_node/elisp/Building-Emacs.html
 
- - the steps involved in building the Emacs executable.
+   - the steps involved in building the Emacs executable.
 
  - https://www.emacswiki.org/emacs/BuildingEmacs
 
- - a brief summary of the basic steps 
+   - a brief summary of the basic steps 
+
+**** using stow
 
 *** Starting Up Emacs
  - http://www.gnu.org/software/emacs/manual/html_node/elisp/Startup-Summary.html#Startup-Summary
