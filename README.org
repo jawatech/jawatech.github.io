@@ -1,5 +1,5 @@
 * Project emacgelion (Mandarin)
-** emacs2wb
+** emacs2wb @ https://github.com/jawatech/emacs2wb
  嘗試將 emacs 放到瀏覽器中執行，並且連結雲端的檔案
 
  一個可以參考的專案是 paredit.js ，如果將它所使用的 ace editor 換成具有 richtext / collaborative edit 的元件，那麼就很有搞頭了… (不過 paredit 仍然不是一個 interpreter ，此功能交由下述子專案 elisp4js 來執行 )
@@ -11,7 +11,7 @@
 *** ymacs @ http://www.ymacs.org/
  這幾乎是成品了吧我想。
 
-** emacs.js
+** emacs.js @ https://github.com/jawatech/emacs.js
  嘗試以 javascript 改寫 emacs ，並且以 nodejs 執行
 
  此一專案是嘗試儘量貼近 emacs 本身的原有功能，以本地端檔案操作為主，以便驗證改寫的功能
@@ -35,7 +35,7 @@
 
  emacs 的啟動流程，這在選擇性的實作 emacs 時很重要，才能知道該實作那些部分
 
-** elisp4js
+** elisp4js @ https://github.com/jawatech/elisp4js
  嘗試以 javascript 改寫 lisp interpreter ，並且以 nodejs 執行
 
  此一專案為最基本的工作，必需能寫出取代 temacs 的程式，才有機會完成上述的兩個專案
@@ -46,7 +46,7 @@
 *** nicferrier/emacs-ejit @ github
  這裏面作者有寫出他的思路和步驟
 * Project emacgelion (English)
-** emacs2wb
+** emacs2wb @ https://github.com/jawatech/emacs2wb
  run emacs in a web browser, linking files in cloud storages
 
  would be desirable if we can employ a richtext / collaborative editor
@@ -58,7 +58,7 @@
 *** ymacs @ http://www.ymacs.org/
  a good start.
 
-** emacs.js
+** emacs.js @ https://github.com/jawatech/emacs.js
  rewrite emacs with javascript and run with node.js (kinda like atom)
 
  this subproject would try to mimic the authentic Emacs as much as possible.
@@ -87,13 +87,13 @@
 
  important while selectively implementing emacs, to know which parts are mandatory
 
-** elisp4js
+** elisp4js @ https://github.com/jawatech/elisp4js
  rewriting lisp interpreter with javascript, and run with nodejs
 
  it's the most basic task; ultimately a replacement of native temacs will be built
 
 *** samsonjs/elisp.js @ github
- MIT licensed and well documented strategies, and referring to ymacs
+ MIT licensed and well documented strategies, and referral to ymacs
 
 *** nicferrier/emacs-ejit @ github
  well documented strategies
