@@ -1,6 +1,0 @@
-* emacs2wb
-嘗試將 emacs 放到瀏覽器中執行，並且連結雲端的檔案
-* emacs.js
-嘗試以 javascript 改寫 emacs ，並且以 nodejs 執行
-* elisp4js
-嘗試以 javascript 改寫 lisp interpreter ，並且以 nodejs 執行
