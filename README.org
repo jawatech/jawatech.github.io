@@ -25,11 +25,11 @@ sudo apt-get install libgif-dev
 
 參考 http://www.linuxidc.com/Linux/2014-08/104975.htm
 **** 執行步驟
-   $ ./configure
-   $ make
-   $ sudo make install prefix=/usr/local/stow/emacs
-   $ cd /usr/local/stow
-   $ stow emacs
+   - $ ./configure
+   - $ make
+   - $ sudo make install prefix=/usr/local/stow/emacs
+   - $ cd /usr/local/stow
+   - $ stow emacs
 ***** 使用 stow 來安裝多個版本的 emacs @ http://www.gnu.org/software/stow/
  說明 http://www.gnu.org/software/stow/manual/stow.html
 
@@ -119,3 +119,110 @@ sudo apt-get install libgif-dev
 *** bookmark+
 
  will use bookmark+ of org mode to facilitate code comment / navigation
+* 參考資料 / References
+** CLDP -- Linux 中文文件計劃 @ http://linux.org.tw/CLDP/OLD/Emacs-Beginner-HOWTO.html
+*** Introduction to Emacs Lisp Programming (以Emacs寫Lisp程式: 簡介)
+
+著者： Robert J. Chassell
+
+From the README file:
+
+This is an elementary introduction to programming in Emacs Lisp for people who are not programmers, and who are not necessarily interested in programming, but who do want to customize or extend their computing environment. （譯文：本書是以Emacs Lisp開發程式的初級課程，用於教授非程式設計師、對程式設計 不一定感興趣但是想客製化或發展他們的電腦的環境的人。）
+可以以匿名(anonymous)登入GNU FTP伺候器取得這本書的完整內容： ftp://prep.ai.mit.edu/gnu/emacs/.
+
+評語：Emacs Lisp的極佳入門手冊--即使你不是專業程式設計師
+
+*** The GNU Emacs Lisp Reference Manual
+
+著者: Richard Stallman
+
+發行者: The Free Software Foundation - http://www.fsf.org/
+
+可以以匿名(anonymous)登入GNU FTP伺候器取得這本書的完整內容： ftp://prep.ai.mit.edu/gnu/emacs/.
+
+評語：Emacs Lisp程式設計的終極指引。
+** 你是如何成为 Lisp 程序员的
+http://blog.csdn.net/u013131455/article/details/48897329
+*** Introduction to Emacs Lisp Programming
+在龐大的Lisp家譜中， Emacs Lisp 不是Common Lisp，而是早期的MacLisp的一個直系後代，
+同時在一些方面作了簡化和強化 。同時我開始閱讀Robert Chassell所著《Introduction to Emacs Lisp Programming》，Robert Chassell是斯托曼院士早年結識的戰友，也是自由軟件基金會的合創人之一，他很早就使用GNU Emacs，而且使用Emacs Lisp程序定制GNU Emacs，斯托曼友善地把 Robert Chassell 介紹給我認識 。這本書既是自由文檔 （可以從GNU的網站自由下載） ，又是自由軟件基金會出版社（GNU Press）的出版物 。等我讀完了這本書之後 ，我覺得這本書實在太美妙了，作者的文筆十分了不起（即使對於想學習英文寫作的人，幫助也應該很大），把這本 書介紹給其他人是完全值得的。我於是找了兩位翻譯人員（毛文濤博士和呂芳女士），把它譯成了中文，我則擔任了全書的編輯和審校工作。中文版質量很高，我很 滿意 ，它作為一本很偉大的編程入門書籍十分適合廣大讀者自學 （我認為讀者應該搞到一本閱讀） 。我至今還想自己動手翻譯這本書的第三版，可惜如今我很難再找 到當年那麼多的時間做編輯和審校之類的工作了。
+*** GNU Emacs Lisp Reference Manual
+閱讀完這本書之後，我意識到如果想使用 Emacs Lisp 開發非玩具級別的實際應用程序 ，那麼根據作者的推薦 ，自由軟件基金會出版的 《GNU Emacs Lisp Reference Manual》是必不可少的工具書 ，我打印了這份文檔的第2.4版本 ，厚厚的共四本 。後來這份文檔正式出版，從GNU網站上訂購的圖書升級到了2.6版 本，針對的是GNU Emacs version 21。我不太認同Eric Raymond在他的名著《The Art of Unix Programming》中對Emacs Lisp的評論，他以為Emacs Lisp只能為Emacs編輯器本身編寫控製程序，而趕不上其他腳本語言全面。實際上，我認為只要熟悉了Emacs Lisp的細節，其他任何腳本語言能完成的工作，都可以使用Emacs Lisp程序完成。我親眼看見斯托曼院士在GNU Emacs內完成電子郵件的編輯、收發等工作，不用Eric Raymond開發的fetchmail程序一樣幹得很好。我自己也利用Emacs Lisp編寫過CGI應用程序，效果也不錯。
+
+Bob Glickstein曾經寫過一本《Writing GNU Emacs Extensions》，可以配合Robert Chassell的書與《GNU Emacs Lisp Reference Manual》，作為補充讀物。
+*** Common Lisp: A Gentle Introduction to Symbolic Computation
+讀了Robert Chassell的書之後，我開始花時間閱讀David Touretzky博士所著的《Common Lisp: A Gentle Introduction to Symbolic Computation》 ，這本書可以從互聯網上自由下載 ，讀者可以自行在萬維網上google得到它 。這也是一本偉大的Lisp著作 ，內容已經是基於 Common Lisp的，但是作者並沒有特意強調這一點 。我把下載的PDF文件打印出來 ，自己動手把打印出的文檔紙張裝訂成了兩卷手冊。我從這本書中得到的最大收穫是 我充分認識到Lisp中的一切都是對象：數字原子（numeric atoms）和符號原子（symbolic atoms）都是對象 。數字原子求值返回它自身的值，而符號原子則有名稱（name）、類型（type）、值（value）、秉性表（plist）和綁定 表（bindlist）。這五個字段可以放入一個數據結構中，並在實現中以C語言的struct表達。
+*** Interpreting Lisp
+在閱讀這些材料的同時，我又從網上找到了Gary Knott教授編寫的一份文檔，《Interpreting Lisp》 ，這份文檔篇幅不長 ，從來沒有正式出版成書。在這份文檔中，作者利用C語言編寫了一個微小的Lisp實現，非常接近於最初的Lisp實現。最可 貴的是他將實現的源代碼和盤托出。從這本書中，我清晰地看到瞭如何構造Lisp對象的結構，我開始認識到內存垃圾收集算法的重要性。在理解了David Touretzky博士所著的《Common Lisp: A Gentle Introduction to Symbolic Computation》 介紹的Lisp對象的結構基礎上 ，我明白了書中圖示的Lisp對像中若僅在結構設計時安排五個字段是不夠的，還需要有供垃圾回收 （GC，Garbage CCollector）模塊操作的字段才行。
+** Emacs是第一个人工生命 by KONG (霍犀子)
+Emacs看起来像是一个其貌不扬的普通编辑器，但实际上却是个真正意义上
+的IDE(Integrated Developing Environment)，和Borland，Microsoft的
+东西不同，Emacs对用户和程序员区别不大，也就是用户即程序员，程序员
+即用户．这一点是这样实现的：Emacs有一个C编的硬核，像其它C语言编的
+程序一样，这个硬核是不能轻易改变的，除非你有源码并且对系统内部有
+较深刻的了解，即使有了这些条件也必须重新make，在运行Emacs时是不能
+对这个硬核做任何代码上的修改的．安装过Emacs的人知道在安装过程中会
+生成一个temacs可执行文件，这个temacs就是完全由C实现的硬核，它实现
+的是LISP的链表解释机制和一些基本的LISP函数，比如在Emacs的
+*scratch* (涂鸦) buffer里打入：
+
+(symbol-function 'car) <Ctrl-j>
+
+系统会告诉你
+#<subr car>
+
+就是说car是个C实现的LISP函数，属于硬核的一部分，你不能改变它的函数
+定义．
+
+其实理论上说这个硬核完全可以最小化，只包含一些最最基本的函数，大概
+用汇编就能够写出来．但为portability和performance起见，这个硬核用C
+实现并包含了基本上所有的常见LISP函数．打个比方，就像逻辑运算一样，
+尽管用NOT和AND就能够表示所有的逻辑运算，平常我们还是NOT,AND,OR齐上．
+temacs里有些LISP函数其实完全可以用一些更基本的LISP函数实现，但为了
+速度，Richard Stallman还是把它们用C实现了，这样做的好处是速度快了，
+坏处看完了下面你就明白了．
+
+有了temacs，以后的事情就是在它的基础上滚雪球，不断地在temacs里eval
+LISP函数，temacs知道的越来越多，功能就会越来越强．Stallman选了几个
+最基本的package，如文件操作等等，作为标准的部件，在install时就喂给
+temacs，再把LISP可执行内存映象dump下来，这就是平常大家用的emacs了．
+同样在*scratch*里打入：
+(symbol-function 'find-file) <Ctrl-j>
+
+结果可能是
+(lambda (filename) ...............)
+这就是经过eval而被temacs吸收的LISP函数；
+
+也可能是
+#[(filename) ................]
+这是Stallman定义的一种LISP bytecode，用来提高LISP的运行效率，这种bytecode
+一般比功能等价的C代码还是要慢一些，但和LISP的文本代码是一一对应的，并且速
+度大大提高，必要时可以通过decompile恢复成LISP文本代码．猜测JAVA的bytecode
+借鉴了不少LISP bytecode的技术，JAVA可以说是一个表面上C++词法风格、实际上
+Object-oriented的type architecture加上LISP的run-time environment．JAVA
+Virtual Machine完全就是一台最新LISP Machine．
+
+言归正传，经eval而被temacs吸收的LISP函数和那种#[subr ...] C函数就不一样了，
+你可以通过eval加入一些这样的函数，也可以通过unintern去掉一些这样的函数，
+还可以现改函数定义略微增加或减少一些功能，这就把一个运行程序的部件当做一
+个数据库一样可以任意剪裁，根据具体情况随意增加或减少它的功能．就像生物的
+新陈代谢一样，汲取营养，排泄废物，所以说Emacs是个生物，唯一的遗憾是这个生
+物还是个婴儿，不会自己觅食，需要用户喂它吃那些.el文件才行．
+
+Internet上最大的.el文件库在
+ftp://archive.cis.ohio-state.edu/pub/gnu/emacs/elisp-archive/
+用户也可以自编或改编一些现成的.el文件以实现自己需要的功能．
+
+.elc是byte-compile相应.el文件产生的byte-code文件，如何编写.el文件可参看
+Emacs的online info manuals (C-h i)的Emacs Lisp reference．
+
+用户可用load和autoload调入新的.el文件．当然调的越多Emacs就越吃内存，Emacs
+有garbage-collect函数负责回收内存，硬核里有根据情况触发garbage-collect的机
+制．
+
+用户用的一切功能都是temacs + 其eval过的所有LISP函数 + 与Emacs配合的外部命令
+(如gdb等)实现的．其中temacs里的链表解释机制是最灵魂的部分，从有LISP的那天起
+就没变过，预eval的package可由安装者指定；与Emacs配合的外部命令可以是OS里的
+任何输入输出可处理的命令，当然能像gdb那样和Emacs有所约定的更好；所eval的
+LISP函数是最灵活的部分，用户可以随心所欲地configure，当然喜欢玩傻瓜机的人还
+是离得远一点为好．
