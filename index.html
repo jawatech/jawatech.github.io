@@ -1,26 +1,694 @@
-<html>
-  <head>
-    <title>Sample "Hello, World" Application</title>
-  </head>
-  <body bgcolor=white>
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2016-01-23 週六 10:31 -->
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="viewport" content="width=device-width, initial-scale=1" />
+<title></title>
+<meta  name="generator" content="Org-mode" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
 
-    <table border="0" cellpadding="10">
-      <tr>
-        <td>
-          <img src="images/springsource.png">
-        </td>
-        <td>
-          <h1>Sample "Hello, World" Application</h1>
-        </td>
-      </tr>
-    </table>
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
 
-    <p>This is the home page for the HelloWorld Web application. </p>
-    <p>To prove that they work, you can execute either of the following links:
-    <ul>
-      <li>To a <a href="hello.jsp">JSP page</a>.
-      <li>To a <a href="hello">servlet</a>.
-    </ul>
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
 
-  </body>
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgheadline16">1. Project Emacgelion (中文)</a>
+<ul>
+<li><a href="#orgheadline8">1.1. 1. emacs.js @ </a>
+<ul>
+<li><a href="#orgheadline2">1.1.1. 1.1 取得 emacs 原始碼 @ </a></li>
+<li><a href="#orgheadline6">1.1.2. 1.2 building emacs</a></li>
+<li><a href="#orgheadline7">1.1.3. 1.3 Starting Up Emacs</a></li>
+</ul>
+</li>
+<li><a href="#orgheadline11">1.2. 2. elisp4js @ </a>
+<ul>
+<li><a href="#orgheadline9">1.2.1. samsonjs/elisp.js @ github</a></li>
+<li><a href="#orgheadline10">1.2.2. nicferrier/emacs-ejit @ github</a></li>
+</ul>
+</li>
+<li><a href="#orgheadline13">1.3. 3. emacs2wb @ </a>
+<ul>
+<li><a href="#orgheadline12">1.3.1. ymacs @ </a></li>
+</ul>
+</li>
+<li><a href="#orgheadline15">1.4. 4. 使用的工具</a>
+<ul>
+<li><a href="#orgheadline14">1.4.1. bookmark+</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orgheadline28">2. Project Emacgelion (English)</a>
+<ul>
+<li><a href="#orgheadline20">2.1. 1. emacs.js @ </a>
+<ul>
+<li><a href="#orgheadline18">2.1.1. building emacs</a></li>
+<li><a href="#orgheadline19">2.1.2. Starting Up Emacs</a></li>
+</ul>
+</li>
+<li><a href="#orgheadline23">2.2. 2. elisp4js @ </a>
+<ul>
+<li><a href="#orgheadline21">2.2.1. samsonjs/elisp.js @ github</a></li>
+<li><a href="#orgheadline22">2.2.2. nicferrier/emacs-ejit @ github</a></li>
+</ul>
+</li>
+<li><a href="#orgheadline25">2.3. 3. emacs2wb @ </a>
+<ul>
+<li><a href="#orgheadline24">2.3.1. ymacs @ </a></li>
+</ul>
+</li>
+<li><a href="#orgheadline27">2.4. 4. tools used</a>
+<ul>
+<li><a href="#orgheadline26">2.4.1. bookmark+</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orgheadline38">3. 參考資料 / References</a>
+<ul>
+<li><a href="#orgheadline31">3.1. CLDP &#x2013; Linux 中文文件計劃 @ </a>
+<ul>
+<li><a href="#orgheadline29">3.1.1. Introduction to Emacs Lisp Programming (以Emacs寫Lisp程式: 簡介)</a></li>
+<li><a href="#orgheadline30">3.1.2. The GNU Emacs Lisp Reference Manual</a></li>
+</ul>
+</li>
+<li><a href="#orgheadline36">3.2. 你是如何成为 Lisp 程序员的</a>
+<ul>
+<li><a href="#orgheadline32">3.2.1. Introduction to Emacs Lisp Programming</a></li>
+<li><a href="#orgheadline33">3.2.2. GNU Emacs Lisp Reference Manual</a></li>
+<li><a href="#orgheadline34">3.2.3. Common Lisp: A Gentle Introduction to Symbolic Computation</a></li>
+<li><a href="#orgheadline35">3.2.4. Interpreting Lisp</a></li>
+</ul>
+</li>
+<li><a href="#orgheadline37">3.3. Emacs是第一个人工生命 by KONG (霍犀子)</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgheadline16" class="outline-2">
+<h2 id="orgheadline16"><span class="section-number-2">1</span> Project Emacgelion (中文)</h2>
+<div class="outline-text-2" id="text-1">
+</div><div id="outline-container-orgheadline8" class="outline-3">
+<h3 id="orgheadline8"><span class="section-number-3">1.1</span> 1. emacs.js @ <a href="https://github.com/jawatech/emacs.js">https://github.com/jawatech/emacs.js</a></h3>
+<div class="outline-text-3" id="text-1-1">
+<ul class="org-ul">
+<li>嘗試以 javascript 改寫 emacs ，並且以 nodejs 執行</li>
+
+<li>此一專案是嘗試儘量貼近 emacs 本身的原有功能，以本地端檔案操作為主，以便驗證改寫的功能</li>
+
+<li>為完成上述之任務，必需取得/了解 emacs 的原始碼、建置過程、啟動過程</li>
+</ul>
+</div>
+<div id="outline-container-orgheadline2" class="outline-4">
+<h4 id="orgheadline2"><span class="section-number-4">1.1.1</span> 1.1 取得 emacs 原始碼 @ <a href="http://ftpmirror.gnu.org/emacs/">http://ftpmirror.gnu.org/emacs/</a></h4>
+<div class="outline-text-4" id="text-1-1-1">
+<p>
+以下以 emacs 24.5 為例
+</p>
+</div>
+<ol class="org-ol"><li><a id="orgheadline1"></a>解壓指令 tar zxvf emacs-24.5.tar.gz<br  /><div class="outline-text-5" id="text-1-1-1-1">
+<p>
+參 <a href="http://blog.gtwang.org/linux/linux-why-are-tar-archive-formats-switching-to-xz-compression-to-replace-bzip2-and-what-about-gzip/">http://blog.gtwang.org/linux/linux-why-are-tar-archive-formats-switching-to-xz-compression-to-replace-bzip2-and-what-about-gzip/</a>
+</p>
+</div></li></ol>
+</div>
+
+<div id="outline-container-orgheadline6" class="outline-4">
+<h4 id="orgheadline6"><span class="section-number-4">1.1.2</span> 1.2 building emacs</h4>
+<div class="outline-text-4" id="text-1-1-2">
+<ul class="org-ul">
+<li><a href="http://www.gnu.org/software/emacs/manual/html_node/elisp/Building-Emacs.html">http://www.gnu.org/software/emacs/manual/html_node/elisp/Building-Emacs.html</a>
+
+<ul class="org-ul">
+<li>上述連結詳細說明建置 emacs 的過程</li>
+</ul></li>
+
+<li><a href="https://www.emacswiki.org/emacs/BuildingEmacs">https://www.emacswiki.org/emacs/BuildingEmacs</a>
+
+<ul class="org-ul">
+<li>上述連結簡略說明建置 emacs 的過程</li>
+</ul></li>
+</ul>
+</div>
+
+<ol class="org-ol"><li><a id="orgheadline3"></a>Ubuntu安装Emacs出现依赖问题(dependency)及解决方案<br  /><div class="outline-text-5" id="text-1-1-2-1">
+<p>
+sudo apt-get install libgif-dev
+</p>
+
+<p>
+參考 <a href="http://www.linuxidc.com/Linux/2014-08/104975.htm">http://www.linuxidc.com/Linux/2014-08/104975.htm</a>
+</p>
+</div></li>
+<li><a id="orgheadline5"></a>執行步驟<br  /><div class="outline-text-5" id="text-1-1-2-2">
+<ul class="org-ul">
+<li>$ ./configure</li>
+<li>$ make</li>
+<li>$ sudo make install prefix=/usr/local/stow/emacs</li>
+<li>$ cd /usr/local/stow</li>
+<li>$ stow emacs</li>
+</ul>
+</div>
+<ol class="org-ol"><li><a id="orgheadline4"></a>使用 stow 來安裝多個版本的 emacs @ <a href="http://www.gnu.org/software/stow/">http://www.gnu.org/software/stow/</a><br  /><div class="outline-text-6" id="text-1-1-2-2-1">
+<p>
+說明 <a href="http://www.gnu.org/software/stow/manual/stow.html">http://www.gnu.org/software/stow/manual/stow.html</a>
+</p>
+</div></li></ol></li></ol>
+</div>
+
+<div id="outline-container-orgheadline7" class="outline-4">
+<h4 id="orgheadline7"><span class="section-number-4">1.1.3</span> 1.3 Starting Up Emacs</h4>
+<div class="outline-text-4" id="text-1-1-3">
+<p>
+<a href="http://www.gnu.org/software/emacs/manual/html_node/elisp/Startup-Summary.html#Startup-Summary">http://www.gnu.org/software/emacs/manual/html_node/elisp/Startup-Summary.html#Startup-Summary</a>
+</p>
+
+<p>
+emacs 的啟動流程，這在選擇性的實作 emacs 時很重要，才能知道該優先實作那些部分
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline11" class="outline-3">
+<h3 id="orgheadline11"><span class="section-number-3">1.2</span> 2. elisp4js @ <a href="https://github.com/jawatech/elisp4js">https://github.com/jawatech/elisp4js</a></h3>
+<div class="outline-text-3" id="text-1-2">
+<ul class="org-ul">
+<li>嘗試以 javascript 改寫 lisp interpreter ，並且以 nodejs 執行</li>
+
+<li>此一專案為最基本的工作，必需能寫出取代 temacs 的程式，才有機會完成 Project Emacgelion 其它的兩個專案</li>
+</ul>
+</div>
+
+<div id="outline-container-orgheadline9" class="outline-4">
+<h4 id="orgheadline9"><span class="section-number-4">1.2.1</span> samsonjs/elisp.js @ github</h4>
+<div class="outline-text-4" id="text-1-2-1">
+<p>
+這位作者很規矩地遵守了 MIT license， 也有有寫出他的思路和步驟，而且特別提到了 ymacs
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgheadline10" class="outline-4">
+<h4 id="orgheadline10"><span class="section-number-4">1.2.2</span> nicferrier/emacs-ejit @ github</h4>
+<div class="outline-text-4" id="text-1-2-2">
+<p>
+這裏面作者有寫出他的思路和步驟
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgheadline13" class="outline-3">
+<h3 id="orgheadline13"><span class="section-number-3">1.3</span> 3. emacs2wb @ <a href="https://github.com/jawatech/emacs2wb">https://github.com/jawatech/emacs2wb</a></h3>
+<div class="outline-text-3" id="text-1-3">
+<ul class="org-ul">
+<li>嘗試將 emacs 放到瀏覽器中執行，並且連結雲端的檔案</li>
+
+<li>一個可以參考的專案是 paredit.js ，如果將它所使用的 ace editor 換成具有 richtext / collaborative edit 的元件，那麼就很有搞頭了… (不過 paredit 仍然不是一個 interpreter ，此功能交由下述子專案 elisp4js 來執行 )</li>
+
+<li>然而從另一個角度來看，因為行為和本地端的文字編輯器已經有所不同，因此改寫的部分可能會沒有現成的套件、文件供參</li>
+
+<li>初期的目標是以能顯示、執行 org mode 相關功能為主</li>
+</ul>
+</div>
+
+<div id="outline-container-orgheadline12" class="outline-4">
+<h4 id="orgheadline12"><span class="section-number-4">1.3.1</span> ymacs @ <a href="http://www.ymacs.org/">http://www.ymacs.org/</a></h4>
+<div class="outline-text-4" id="text-1-3-1">
+<p>
+這幾乎是成品了吧我想。
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgheadline15" class="outline-3">
+<h3 id="orgheadline15"><span class="section-number-3">1.4</span> 4. 使用的工具</h3>
+<div class="outline-text-3" id="text-1-4">
+</div><div id="outline-container-orgheadline14" class="outline-4">
+<h4 id="orgheadline14"><span class="section-number-4">1.4.1</span> bookmark+</h4>
+<div class="outline-text-4" id="text-1-4-1">
+<p>
+這個 org mode 的外掛，功能非常之好，讓我可以找到3年前寫的註解所指向的原始碼
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline28" class="outline-2">
+<h2 id="orgheadline28"><span class="section-number-2">2</span> Project Emacgelion (English)</h2>
+<div class="outline-text-2" id="text-2">
+</div><div id="outline-container-orgheadline20" class="outline-3">
+<h3 id="orgheadline20"><span class="section-number-3">2.1</span> 1. emacs.js @ <a href="https://github.com/jawatech/emacs.js">https://github.com/jawatech/emacs.js</a></h3>
+<div class="outline-text-3" id="text-2-1">
+<ul class="org-ul">
+<li>rewrite emacs with javascript and run with node.js (kinda like atom)</li>
+
+<li>this subproject would try to mimic the authentic Emacs as much as possible.</li>
+
+<li>will operate on local storage, thus validating against the authentic Emacs</li>
+
+<li>to do so, it would be mandatory to understand the authentic Emacs's source code, build process and startup process</li>
+</ul>
+</div>
+
+<div id="outline-container-orgheadline18" class="outline-4">
+<h4 id="orgheadline18"><span class="section-number-4">2.1.1</span> building emacs</h4>
+<div class="outline-text-4" id="text-2-1-1">
+<ul class="org-ul">
+<li><a href="http://www.gnu.org/software/emacs/manual/html_node/elisp/Building-Emacs.html">http://www.gnu.org/software/emacs/manual/html_node/elisp/Building-Emacs.html</a>
+
+<ul class="org-ul">
+<li>the steps involved in building the Emacs executable.</li>
+</ul></li>
+
+<li><a href="https://www.emacswiki.org/emacs/BuildingEmacs">https://www.emacswiki.org/emacs/BuildingEmacs</a>
+
+<ul class="org-ul">
+<li>a brief summary of the basic steps</li>
+</ul></li>
+</ul>
+</div>
+
+<ol class="org-ol"><li><a id="orgheadline17"></a>using stow<br  /></li></ol>
+</div>
+
+<div id="outline-container-orgheadline19" class="outline-4">
+<h4 id="orgheadline19"><span class="section-number-4">2.1.2</span> Starting Up Emacs</h4>
+<div class="outline-text-4" id="text-2-1-2">
+<ul class="org-ul">
+<li><a href="http://www.gnu.org/software/emacs/manual/html_node/elisp/Startup-Summary.html#Startup-Summary">http://www.gnu.org/software/emacs/manual/html_node/elisp/Startup-Summary.html#Startup-Summary</a></li>
+
+<li>Summary: Sequence of Actions at Startup</li>
+
+<li>important while selectively implementing emacs, to know which parts are mandatory</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline23" class="outline-3">
+<h3 id="orgheadline23"><span class="section-number-3">2.2</span> 2. elisp4js @ <a href="https://github.com/jawatech/elisp4js">https://github.com/jawatech/elisp4js</a></h3>
+<div class="outline-text-3" id="text-2-2">
+<ul class="org-ul">
+<li>rewriting lisp interpreter with javascript, and run with nodejs</li>
+
+<li>it's the most basic task; ultimately a replacement of native temacs will be built</li>
+</ul>
+</div>
+
+<div id="outline-container-orgheadline21" class="outline-4">
+<h4 id="orgheadline21"><span class="section-number-4">2.2.1</span> samsonjs/elisp.js @ github</h4>
+<div class="outline-text-4" id="text-2-2-1">
+<p>
+MIT licensed and well documented strategies, and referral to ymacs
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgheadline22" class="outline-4">
+<h4 id="orgheadline22"><span class="section-number-4">2.2.2</span> nicferrier/emacs-ejit @ github</h4>
+<div class="outline-text-4" id="text-2-2-2">
+<p>
+well documented strategies
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgheadline25" class="outline-3">
+<h3 id="orgheadline25"><span class="section-number-3">2.3</span> 3. emacs2wb @ <a href="https://github.com/jawatech/emacs2wb">https://github.com/jawatech/emacs2wb</a></h3>
+<div class="outline-text-3" id="text-2-3">
+<ul class="org-ul">
+<li>run emacs in a web browser, linking files in cloud storages</li>
+
+<li>would be desirable if we can employ a richtext / collaborative editor</li>
+
+<li>on the other hand, owing to the fundamental difference against the authentic Emacs, there may not be many documents</li>
+
+<li>the first milestone would be to display and run org mode correctly</li>
+</ul>
+</div>
+
+<div id="outline-container-orgheadline24" class="outline-4">
+<h4 id="orgheadline24"><span class="section-number-4">2.3.1</span> ymacs @ <a href="http://www.ymacs.org/">http://www.ymacs.org/</a></h4>
+<div class="outline-text-4" id="text-2-3-1">
+<p>
+a good start.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline27" class="outline-3">
+<h3 id="orgheadline27"><span class="section-number-3">2.4</span> 4. tools used</h3>
+<div class="outline-text-3" id="text-2-4">
+</div><div id="outline-container-orgheadline26" class="outline-4">
+<h4 id="orgheadline26"><span class="section-number-4">2.4.1</span> bookmark+</h4>
+<div class="outline-text-4" id="text-2-4-1">
+<p>
+will use bookmark+ of org mode to facilitate code comment / navigation
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orgheadline38" class="outline-2">
+<h2 id="orgheadline38"><span class="section-number-2">3</span> 參考資料 / References</h2>
+<div class="outline-text-2" id="text-3">
+</div><div id="outline-container-orgheadline31" class="outline-3">
+<h3 id="orgheadline31"><span class="section-number-3">3.1</span> CLDP &#x2013; Linux 中文文件計劃 @ <a href="http://linux.org.tw/CLDP/OLD/Emacs-Beginner-HOWTO.html">http://linux.org.tw/CLDP/OLD/Emacs-Beginner-HOWTO.html</a></h3>
+<div class="outline-text-3" id="text-3-1">
+</div><div id="outline-container-orgheadline29" class="outline-4">
+<h4 id="orgheadline29"><span class="section-number-4">3.1.1</span> Introduction to Emacs Lisp Programming (以Emacs寫Lisp程式: 簡介)</h4>
+<div class="outline-text-4" id="text-3-1-1">
+<p>
+著者： Robert J. Chassell
+</p>
+
+<p>
+From the README file:
+</p>
+
+<p>
+This is an elementary introduction to programming in Emacs Lisp for people who are not programmers, and who are not necessarily interested in programming, but who do want to customize or extend their computing environment. （譯文：本書是以Emacs Lisp開發程式的初級課程，用於教授非程式設計師、對程式設計 不一定感興趣但是想客製化或發展他們的電腦的環境的人。）
+可以以匿名(anonymous)登入GNU FTP伺候器取得這本書的完整內容： <a href="ftp://prep.ai.mit.edu/gnu/emacs/">ftp://prep.ai.mit.edu/gnu/emacs/</a>.
+</p>
+
+<p>
+評語：Emacs Lisp的極佳入門手冊&#x2013;即使你不是專業程式設計師
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgheadline30" class="outline-4">
+<h4 id="orgheadline30"><span class="section-number-4">3.1.2</span> The GNU Emacs Lisp Reference Manual</h4>
+<div class="outline-text-4" id="text-3-1-2">
+<p>
+著者: Richard Stallman
+</p>
+
+<p>
+發行者: The Free Software Foundation - <a href="http://www.fsf.org/">http://www.fsf.org/</a>
+</p>
+
+<p>
+可以以匿名(anonymous)登入GNU FTP伺候器取得這本書的完整內容： <a href="ftp://prep.ai.mit.edu/gnu/emacs/">ftp://prep.ai.mit.edu/gnu/emacs/</a>.
+</p>
+
+<p>
+評語：Emacs Lisp程式設計的終極指引。
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgheadline36" class="outline-3">
+<h3 id="orgheadline36"><span class="section-number-3">3.2</span> 你是如何成为 Lisp 程序员的</h3>
+<div class="outline-text-3" id="text-3-2">
+<p>
+<a href="http://blog.csdn.net/u013131455/article/details/48897329">http://blog.csdn.net/u013131455/article/details/48897329</a>
+</p>
+</div>
+<div id="outline-container-orgheadline32" class="outline-4">
+<h4 id="orgheadline32"><span class="section-number-4">3.2.1</span> Introduction to Emacs Lisp Programming</h4>
+<div class="outline-text-4" id="text-3-2-1">
+<p>
+在龐大的Lisp家譜中， Emacs Lisp 不是Common Lisp，而是早期的MacLisp的一個直系後代，
+同時在一些方面作了簡化和強化 。同時我開始閱讀Robert Chassell所著《Introduction to Emacs Lisp Programming》，Robert Chassell是斯托曼院士早年結識的戰友，也是自由軟件基金會的合創人之一，他很早就使用GNU Emacs，而且使用Emacs Lisp程序定制GNU Emacs，斯托曼友善地把 Robert Chassell 介紹給我認識 。這本書既是自由文檔 （可以從GNU的網站自由下載） ，又是自由軟件基金會出版社（GNU Press）的出版物 。等我讀完了這本書之後 ，我覺得這本書實在太美妙了，作者的文筆十分了不起（即使對於想學習英文寫作的人，幫助也應該很大），把這本 書介紹給其他人是完全值得的。我於是找了兩位翻譯人員（毛文濤博士和呂芳女士），把它譯成了中文，我則擔任了全書的編輯和審校工作。中文版質量很高，我很 滿意 ，它作為一本很偉大的編程入門書籍十分適合廣大讀者自學 （我認為讀者應該搞到一本閱讀） 。我至今還想自己動手翻譯這本書的第三版，可惜如今我很難再找 到當年那麼多的時間做編輯和審校之類的工作了。
+</p>
+</div>
+</div>
+<div id="outline-container-orgheadline33" class="outline-4">
+<h4 id="orgheadline33"><span class="section-number-4">3.2.2</span> GNU Emacs Lisp Reference Manual</h4>
+<div class="outline-text-4" id="text-3-2-2">
+<p>
+閱讀完這本書之後，我意識到如果想使用 Emacs Lisp 開發非玩具級別的實際應用程序 ，那麼根據作者的推薦 ，自由軟件基金會出版的 《GNU Emacs Lisp Reference Manual》是必不可少的工具書 ，我打印了這份文檔的第2.4版本 ，厚厚的共四本 。後來這份文檔正式出版，從GNU網站上訂購的圖書升級到了2.6版 本，針對的是GNU Emacs version 21。我不太認同Eric Raymond在他的名著《The Art of Unix Programming》中對Emacs Lisp的評論，他以為Emacs Lisp只能為Emacs編輯器本身編寫控製程序，而趕不上其他腳本語言全面。實際上，我認為只要熟悉了Emacs Lisp的細節，其他任何腳本語言能完成的工作，都可以使用Emacs Lisp程序完成。我親眼看見斯托曼院士在GNU Emacs內完成電子郵件的編輯、收發等工作，不用Eric Raymond開發的fetchmail程序一樣幹得很好。我自己也利用Emacs Lisp編寫過CGI應用程序，效果也不錯。
+</p>
+
+<p>
+Bob Glickstein曾經寫過一本《Writing GNU Emacs Extensions》，可以配合Robert Chassell的書與《GNU Emacs Lisp Reference Manual》，作為補充讀物。
+</p>
+</div>
+</div>
+<div id="outline-container-orgheadline34" class="outline-4">
+<h4 id="orgheadline34"><span class="section-number-4">3.2.3</span> Common Lisp: A Gentle Introduction to Symbolic Computation</h4>
+<div class="outline-text-4" id="text-3-2-3">
+<p>
+讀了Robert Chassell的書之後，我開始花時間閱讀David Touretzky博士所著的《Common Lisp: A Gentle Introduction to Symbolic Computation》 ，這本書可以從互聯網上自由下載 ，讀者可以自行在萬維網上google得到它 。這也是一本偉大的Lisp著作 ，內容已經是基於 Common Lisp的，但是作者並沒有特意強調這一點 。我把下載的PDF文件打印出來 ，自己動手把打印出的文檔紙張裝訂成了兩卷手冊。我從這本書中得到的最大收穫是 我充分認識到Lisp中的一切都是對象：數字原子（numeric atoms）和符號原子（symbolic atoms）都是對象 。數字原子求值返回它自身的值，而符號原子則有名稱（name）、類型（type）、值（value）、秉性表（plist）和綁定 表（bindlist）。這五個字段可以放入一個數據結構中，並在實現中以C語言的struct表達。
+</p>
+</div>
+</div>
+<div id="outline-container-orgheadline35" class="outline-4">
+<h4 id="orgheadline35"><span class="section-number-4">3.2.4</span> Interpreting Lisp</h4>
+<div class="outline-text-4" id="text-3-2-4">
+<p>
+在閱讀這些材料的同時，我又從網上找到了Gary Knott教授編寫的一份文檔，《Interpreting Lisp》 ，這份文檔篇幅不長 ，從來沒有正式出版成書。在這份文檔中，作者利用C語言編寫了一個微小的Lisp實現，非常接近於最初的Lisp實現。最可 貴的是他將實現的源代碼和盤托出。從這本書中，我清晰地看到瞭如何構造Lisp對象的結構，我開始認識到內存垃圾收集算法的重要性。在理解了David Touretzky博士所著的《Common Lisp: A Gentle Introduction to Symbolic Computation》 介紹的Lisp對象的結構基礎上 ，我明白了書中圖示的Lisp對像中若僅在結構設計時安排五個字段是不夠的，還需要有供垃圾回收 （GC，Garbage CCollector）模塊操作的字段才行。
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgheadline37" class="outline-3">
+<h3 id="orgheadline37"><span class="section-number-3">3.3</span> Emacs是第一个人工生命 by KONG (霍犀子)</h3>
+<div class="outline-text-3" id="text-3-3">
+<p>
+Emacs看起来像是一个其貌不扬的普通编辑器，但实际上却是个真正意义上
+的IDE(Integrated Developing Environment)，和Borland，Microsoft的
+东西不同，Emacs对用户和程序员区别不大，也就是用户即程序员，程序员
+即用户．这一点是这样实现的：Emacs有一个C编的硬核，像其它C语言编的
+程序一样，这个硬核是不能轻易改变的，除非你有源码并且对系统内部有
+较深刻的了解，即使有了这些条件也必须重新make，在运行Emacs时是不能
+对这个硬核做任何代码上的修改的．安装过Emacs的人知道在安装过程中会
+生成一个temacs可执行文件，这个temacs就是完全由C实现的硬核，它实现
+的是LISP的链表解释机制和一些基本的LISP函数，比如在Emacs的
+<b>scratch</b> (涂鸦) buffer里打入：
+</p>
+
+<p>
+(symbol-function 'car) &lt;Ctrl-j&gt;
+</p>
+
+<p>
+系统会告诉你
+#&lt;subr car&gt;
+</p>
+
+<p>
+就是说car是个C实现的LISP函数，属于硬核的一部分，你不能改变它的函数
+定义．
+</p>
+
+<p>
+其实理论上说这个硬核完全可以最小化，只包含一些最最基本的函数，大概
+用汇编就能够写出来．但为portability和performance起见，这个硬核用C
+实现并包含了基本上所有的常见LISP函数．打个比方，就像逻辑运算一样，
+尽管用NOT和AND就能够表示所有的逻辑运算，平常我们还是NOT,AND,OR齐上．
+temacs里有些LISP函数其实完全可以用一些更基本的LISP函数实现，但为了
+速度，Richard Stallman还是把它们用C实现了，这样做的好处是速度快了，
+坏处看完了下面你就明白了．
+</p>
+
+<p>
+有了temacs，以后的事情就是在它的基础上滚雪球，不断地在temacs里eval
+LISP函数，temacs知道的越来越多，功能就会越来越强．Stallman选了几个
+最基本的package，如文件操作等等，作为标准的部件，在install时就喂给
+temacs，再把LISP可执行内存映象dump下来，这就是平常大家用的emacs了．
+同样在*scratch*里打入：
+(symbol-function 'find-file) &lt;Ctrl-j&gt;
+</p>
+
+<p>
+结果可能是
+(lambda (filename) &#x2026;&#x2026;&#x2026;&#x2026;&#x2026;)
+这就是经过eval而被temacs吸收的LISP函数；
+</p>
+
+<p>
+也可能是
+#[(filename) &#x2026;&#x2026;&#x2026;&#x2026;&#x2026;.]
+这是Stallman定义的一种LISP bytecode，用来提高LISP的运行效率，这种bytecode
+一般比功能等价的C代码还是要慢一些，但和LISP的文本代码是一一对应的，并且速
+度大大提高，必要时可以通过decompile恢复成LISP文本代码．猜测JAVA的bytecode
+借鉴了不少LISP bytecode的技术，JAVA可以说是一个表面上C++词法风格、实际上
+Object-oriented的type architecture加上LISP的run-time environment．JAVA
+Virtual Machine完全就是一台最新LISP Machine．
+</p>
+
+<p>
+言归正传，经eval而被temacs吸收的LISP函数和那种#[subr &#x2026;] C函数就不一样了，
+你可以通过eval加入一些这样的函数，也可以通过unintern去掉一些这样的函数，
+还可以现改函数定义略微增加或减少一些功能，这就把一个运行程序的部件当做一
+个数据库一样可以任意剪裁，根据具体情况随意增加或减少它的功能．就像生物的
+新陈代谢一样，汲取营养，排泄废物，所以说Emacs是个生物，唯一的遗憾是这个生
+物还是个婴儿，不会自己觅食，需要用户喂它吃那些.el文件才行．
+</p>
+
+<p>
+Internet上最大的.el文件库在
+<a href="ftp://archive.cis.ohio-state.edu/pub/gnu/emacs/elisp-archive/">ftp://archive.cis.ohio-state.edu/pub/gnu/emacs/elisp-archive/</a>
+用户也可以自编或改编一些现成的.el文件以实现自己需要的功能．
+</p>
+
+<p>
+.elc是byte-compile相应.el文件产生的byte-code文件，如何编写.el文件可参看
+Emacs的online info manuals (C-h i)的Emacs Lisp reference．
+</p>
+
+<p>
+用户可用load和autoload调入新的.el文件．当然调的越多Emacs就越吃内存，Emacs
+有garbage-collect函数负责回收内存，硬核里有根据情况触发garbage-collect的机
+制．
+</p>
+
+<p>
+用户用的一切功能都是temacs + 其eval过的所有LISP函数 + 与Emacs配合的外部命令
+(如gdb等)实现的．其中temacs里的链表解释机制是最灵魂的部分，从有LISP的那天起
+就没变过，预eval的package可由安装者指定；与Emacs配合的外部命令可以是OS里的
+任何输入输出可处理的命令，当然能像gdb那样和Emacs有所约定的更好；所eval的
+LISP函数是最灵活的部分，用户可以随心所欲地configure，当然喜欢玩傻瓜机的人还
+是离得远一点为好．
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2016-01-23 週六 10:31</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
 </html>
