@@ -5,9 +5,13 @@
 
  - 此一專案是嘗試儘量貼近 emacs 本身的原有功能，以本地端檔案操作為主，以便驗證改寫的功能
 
- - 為完成上述之任務，必需了解 emacs 的原始碼、建置過程、啟動過程
+ - 為完成上述之任務，必需取得/了解 emacs 的原始碼、建置過程、啟動過程
+*** 1.1 取得 emacs 原始碼 @ http://ftpmirror.gnu.org/emacs/
+以下以 emacs 24.5 為例
+**** 解壓指令 tar zxvf emacs-24.5.tar.gz
+參 http://blog.gtwang.org/linux/linux-why-are-tar-archive-formats-switching-to-xz-compression-to-replace-bzip2-and-what-about-gzip/
 
-*** building emacs
+*** 1.2 building emacs
  - http://www.gnu.org/software/emacs/manual/html_node/elisp/Building-Emacs.html
 
    - 上述連結詳細說明建置 emacs 的過程
@@ -16,11 +20,7 @@
 
    - 上述連結簡略說明建置 emacs 的過程
 
-**** 取得 emacs 原始碼 @ http://ftpmirror.gnu.org/emacs/
-以下以 emacs 24.5 為例
-***** 解壓指令 tar zxvf emacs-24.5.tar.gz
-參 http://blog.gtwang.org/linux/linux-why-are-tar-archive-formats-switching-to-xz-compression-to-replace-bzip2-and-what-about-gzip/
-**** Ubuntu安装Emacs出现到依赖问题及解决方案
+**** Ubuntu安装Emacs出现依赖问题(dependency)及解决方案
 sudo apt-get install libgif-dev
 
 參考 http://www.linuxidc.com/Linux/2014-08/104975.htm
@@ -33,15 +33,15 @@ sudo apt-get install libgif-dev
 ***** 使用 stow 來安裝多個版本的 emacs @ http://www.gnu.org/software/stow/
  說明 http://www.gnu.org/software/stow/manual/stow.html
 
-*** Starting Up Emacs
+*** 1.3 Starting Up Emacs
  http://www.gnu.org/software/emacs/manual/html_node/elisp/Startup-Summary.html#Startup-Summary
 
- emacs 的啟動流程，這在選擇性的實作 emacs 時很重要，才能知道該實作那些部分
+ emacs 的啟動流程，這在選擇性的實作 emacs 時很重要，才能知道該優先實作那些部分
 
 ** 2. elisp4js @ https://github.com/jawatech/elisp4js
  - 嘗試以 javascript 改寫 lisp interpreter ，並且以 nodejs 執行
 
- - 此一專案為最基本的工作，必需能寫出取代 temacs 的程式，才有機會完成上述的兩個專案
+ - 此一專案為最基本的工作，必需能寫出取代 temacs 的程式，才有機會完成 Project Emacgelion 其它的兩個專案
 
 *** samsonjs/elisp.js @ github
  這位作者很規矩地遵守了 MIT license， 也有有寫出他的思路和步驟，而且特別提到了 ymacs
@@ -61,7 +61,7 @@ sudo apt-get install libgif-dev
  這幾乎是成品了吧我想。
 ** 4. 使用的工具
 *** bookmark+
- 這個 org mode 的外掛，功能非常之好，讓我可以找到3年前寫的註解所指向的原始碼
+ 這個外掛，功能非常之好，讓我可以找到3年前寫的 org mode 註解所指向的原始碼
 
 * Project Emacgelion (English)
 
@@ -118,7 +118,7 @@ sudo apt-get install libgif-dev
 
 *** bookmark+
 
- will use bookmark+ of org mode to facilitate code comment / navigation
+ will use bookmark+ with org mode to facilitate code comment / navigation
 * 參考資料 / References
 ** CLDP -- Linux 中文文件計劃 @ http://linux.org.tw/CLDP/OLD/Emacs-Beginner-HOWTO.html
 *** Introduction to Emacs Lisp Programming (以Emacs寫Lisp程式: 簡介)
