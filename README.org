@@ -97,10 +97,10 @@ sudo apt-get install libgif-dev
 
  - it's the most basic task; ultimately a replacement of native temacs will be built
 
-*** samsonjs/elisp.js @ github
+*** 2.1 samsonjs/elisp.js @ github
  MIT licensed and well documented strategies, and referral to ymacs
 
-*** nicferrier/emacs-ejit @ github
+*** 2.2 nicferrier/emacs-ejit @ github
  well documented strategies
 ** 3. emacs2wb @ https://github.com/jawatech/emacs2wb
  - run emacs in a web browser, linking files in cloud storages
@@ -111,16 +111,16 @@ sudo apt-get install libgif-dev
 
  - the first milestone would be to display and run org mode correctly
 
-*** ymacs @ http://www.ymacs.org/
+*** 3.1 ymacs @ http://www.ymacs.org/
  a good start.
 
 ** 4. tools used
 
-*** bookmark+
+*** 4.1 bookmark+
 
  will use bookmark+ with org mode to facilitate code comment / navigation
 * 參考資料 / References
-** CLDP -- Linux 中文文件計劃 @ http://linux.org.tw/CLDP/OLD/Emacs-Beginner-HOWTO.html
+** 1. CLDP -- Linux 中文文件計劃 @ http://linux.org.tw/CLDP/OLD/Emacs-Beginner-HOWTO.html
 *** Introduction to Emacs Lisp Programming (以Emacs寫Lisp程式: 簡介)
 
 著者： Robert J. Chassell
@@ -141,7 +141,7 @@ This is an elementary introduction to programming in Emacs Lisp for people who a
 可以以匿名(anonymous)登入GNU FTP伺候器取得這本書的完整內容： ftp://prep.ai.mit.edu/gnu/emacs/.
 
 評語：Emacs Lisp程式設計的終極指引。
-** 你是如何成为 Lisp 程序员的
+** 2. 你是如何成为 Lisp 程序员的
 http://blog.csdn.net/u013131455/article/details/48897329
 *** Introduction to Emacs Lisp Programming
 在龐大的Lisp家譜中， Emacs Lisp 不是Common Lisp，而是早期的MacLisp的一個直系後代，
@@ -154,7 +154,7 @@ Bob Glickstein曾經寫過一本《Writing GNU Emacs Extensions》，可以配�
 讀了Robert Chassell的書之後，我開始花時間閱讀David Touretzky博士所著的《Common Lisp: A Gentle Introduction to Symbolic Computation》 ，這本書可以從互聯網上自由下載 ，讀者可以自行在萬維網上google得到它 。這也是一本偉大的Lisp著作 ，內容已經是基於 Common Lisp的，但是作者並沒有特意強調這一點 。我把下載的PDF文件打印出來 ，自己動手把打印出的文檔紙張裝訂成了兩卷手冊。我從這本書中得到的最大收穫是 我充分認識到Lisp中的一切都是對象：數字原子（numeric atoms）和符號原子（symbolic atoms）都是對象 。數字原子求值返回它自身的值，而符號原子則有名稱（name）、類型（type）、值（value）、秉性表（plist）和綁定 表（bindlist）。這五個字段可以放入一個數據結構中，並在實現中以C語言的struct表達。
 *** Interpreting Lisp
 在閱讀這些材料的同時，我又從網上找到了Gary Knott教授編寫的一份文檔，《Interpreting Lisp》 ，這份文檔篇幅不長 ，從來沒有正式出版成書。在這份文檔中，作者利用C語言編寫了一個微小的Lisp實現，非常接近於最初的Lisp實現。最可 貴的是他將實現的源代碼和盤托出。從這本書中，我清晰地看到瞭如何構造Lisp對象的結構，我開始認識到內存垃圾收集算法的重要性。在理解了David Touretzky博士所著的《Common Lisp: A Gentle Introduction to Symbolic Computation》 介紹的Lisp對象的結構基礎上 ，我明白了書中圖示的Lisp對像中若僅在結構設計時安排五個字段是不夠的，還需要有供垃圾回收 （GC，Garbage CCollector）模塊操作的字段才行。
-** Emacs是第一个人工生命 by KONG (霍犀子)
+** 3. Emacs是第一个人工生命 by KONG (霍犀子)
 Emacs看起来像是一个其貌不扬的普通编辑器，但实际上却是个真正意义上
 的IDE(Integrated Developing Environment)，和Borland，Microsoft的
 东西不同，Emacs对用户和程序员区别不大，也就是用户即程序员，程序员
@@ -226,3 +226,45 @@ Emacs的online info manuals (C-h i)的Emacs Lisp reference．
 任何输入输出可处理的命令，当然能像gdb那样和Emacs有所约定的更好；所eval的
 LISP函数是最灵活的部分，用户可以随心所欲地configure，当然喜欢玩傻瓜机的人还
 是离得远一点为好．
+** 4. Building Emacs @ http://www.gnu.org/software/emacs/manual/html_node/elisp/Building-Emacs.html
+This section explains the steps involved in building the Emacs executable. You don’t have to know this material to build and install Emacs, since the makefiles do all these things automatically. This information is pertinent to Emacs developers.
+
+Compilation of the C source files in the src directory produces an executable file called *temacs* , also called a bare impure Emacs. It contains the Emacs Lisp interpreter and I/O routines, but not the editing commands.
+
+The command *temacs -l loadup* would run temacs and direct it to load loadup.el. The loadup library loads additional Lisp libraries, which set up the normal Emacs editing environment. After this step, the Emacs executable is no longer bare.
+
+Because it takes some time to load the standard Lisp files, the temacs executable usually isn’t run directly by users. Instead, as one of the last steps of building Emacs, the command *‘temacs -batch -l loadup dump’* is run. The special ‘dump’ argument causes temacs to dump out an executable program, called emacs, which has all the standard Lisp files preloaded. (The ‘-batch’ argument prevents temacs from trying to initialize any of its data on the terminal, so that the tables of terminal information are empty in the dumped Emacs.)
+
+The dumped emacs executable (also called a pure Emacs) is the one which is installed. The variable preloaded-file-list stores a list of the Lisp files preloaded into the dumped Emacs. If you port Emacs to a new operating system, and are not able to implement dumping, then Emacs must load loadup.el each time it starts.
+
+You can specify additional files to preload by writing a library named site-load.el that loads them. You may need to rebuild Emacs with an added definition
+
+#define SITELOAD_PURESIZE_EXTRA n
+to make n added bytes of pure space to hold the additional files; see src/puresize.h. (Try adding increments of 20000 until it is big enough.) However, the advantage of preloading additional files decreases as machines get faster. On modern machines, it is usually not advisable.
+
+After loadup.el reads *site-load.el*, it finds the documentation strings for primitive and preloaded functions (and variables) in the file etc/DOC where they are stored, by calling *Snarf-documentation* (see Accessing Documentation).
+
+You can specify other Lisp expressions to execute just before dumping by putting them in a library named *site-init.el*. This file is executed after the documentation strings are found.
+
+If you want to *preload* function or variable definitions, there are three ways you can do this and make their documentation strings accessible when you subsequently run Emacs:
+
+- Arrange to scan these files when producing the etc/DOC file, and load them with site-load.el.
+- Load the files with site-init.el, then copy the files into the installation directory for Lisp files when you install Emacs.
+- Specify a nil value for byte-compile-dynamic-docstrings as a local variable in each of these files, and load them with either site-load.el or site-init.el. (This method has the drawback that the documentation strings take up space in Emacs all the time.)
+
+It is not advisable to put anything in site-load.el or site-init.el that would alter any of the features that users expect in an ordinary unmodified Emacs. If you feel you must override normal features for your site, do it with *default.el*, so that users can override your changes if they wish. See Startup Summary. Note that if either site-load.el or site-init.el changes load-path, the changes will be lost after dumping. See Library Search. To make a permanent change to load-path, use the --enable-locallisppath option of configure.
+
+In a package that can be preloaded, it is sometimes necessary (or useful) to *delay* certain evaluations until Emacs subsequently starts up. The vast majority of such cases relate to the values of customizable variables. For example, tutorial-directory is a variable defined in startup.el, which is preloaded. The default value is set based on data-directory. The variable needs to access the value of data-directory when Emacs starts, not when it is dumped, because the Emacs executable has probably been installed in a different location since it was dumped.
+
+*** Function: custom-initialize-delay symbol value
+This function delays the initialization of symbol to the next Emacs start. You normally use this function by specifying it as the :initialize property of a customizable variable. (The argument value is unused, and is provided only for compatibility with the form Custom expects.)
+
+In the unlikely event that you need a more general functionality than custom-initialize-delay provides, you can use before-init-hook (see Startup Summary).
+
+*** Function: dump-emacs to-file from-file
+This function dumps the current state of Emacs into an executable file to-file. It takes symbols from from-file (this is normally the executable file temacs).
+
+If you want to use this function in an Emacs that was already dumped, you must run Emacs with ‘-batch’.
+
+** 5. Summary: Sequence of Actions at Startup @ http://www.gnu.org/software/emacs/manual/html_node/elisp/Startup-Summary.html
+
