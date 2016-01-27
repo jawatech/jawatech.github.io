@@ -43,11 +43,34 @@ sudo apt-get install libgif-dev
 
  - 此一專案為最基本的工作，必需能寫出取代 temacs 的程式，才有機會完成 Project Emacgelion 其它的兩個專案
 
-*** samsonjs/elisp.js @ github
- 這位作者很規矩地遵守了 MIT license， 也有有寫出他的思路和步驟，而且特別提到了 ymacs
+*** mishoo/ymacs @ github (40/310/52)
+https://github.com/mishoo/ymacs
+http://www.ymacs.org/
+幾乎是成品的感覺，上次活動是9個月前
+*** mishoo/SLip @ github (12/119/13)
+https://github.com/mishoo/SLip
 
-*** nicferrier/emacs-ejit @ github
- 這裏面作者有寫出他的思路和步驟
+一個 lisp REPL 用來當成 browser 的腳本語言，上次活動是3年前
+*** hraberg/deuce @ github (80/384/14)
+https://github.com/hraberg/deuce
+
+這是用現代版的 lisp ( Clojure ) 來重製 emacs 的專案。很可惜目前看來進度停在6個月前；不過很多文件都很值得參考。
+*** samsonjs/elisp.js @ github (2/31/2)
+https://github.com/samsonjs/elisp.js
+這位作者很規矩地遵守了 MIT license， 也有有寫出他的思路和步驟，而且特別提到了 ymacs ，上次活動是6年前
+
+*** nicferrier/emacs-ejit @ github (7/26/3)
+https://github.com/nicferrier/emacs-ejit
+
+這裏面作者有寫出他的思路和步驟 ，上次活動是一年前
+*** dogada/metajs @ github (7/37/4)
+https://github.com/dogada/metajs
+
+看作者的說明是滿不錯的，上次活動是兩年前
+*** kiwanami/node-elparser @ github 
+https://github.com/kiwanami/node-elparser
+
+單純就是個 parser ，上次活動是半年前
 ** 3. emacs2wb @ https://github.com/jawatech/emacs2wb
  - 嘗試將 emacs 放到瀏覽器中執行，並且連結雲端的檔案
 
@@ -339,7 +362,7 @@ When Emacs is started up, it performs the following operations (see normal-top-l
 29. If started by the X session manager, it calls emacs-session-restore passing it as argument the ID
     of the previous session. See Session Management.
 
-The following options affect some aspects of the startup sequence.
+*** The following options affect some aspects of the startup sequence.
 
 User Option: inhibit-startup-screen
    
@@ -378,8 +401,8 @@ User Option: initial-scratch-message
     This variable, if non-nil, should be a string, which is inserted into the *scratch* buffer when
     Emacs starts up. If it is nil, the *scratch* buffer is empty.
    
-The following command-line options affect some aspects of the startup sequence. See Initial Options in
-The GNU Emacs Manual.
+*** The following command-line options affect some aspects of the startup sequence. 
+See Initial Options in The GNU Emacs Manual.
 
 --no-splash
    
@@ -407,3 +430,4 @@ The GNU Emacs Manual.
    
     Equivalent to ‘-q --no-site-file --no-splash’.
 
+** 6. Coding Style @https://github.com/airbnb/javascript
