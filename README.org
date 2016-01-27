@@ -83,9 +83,14 @@ https://github.com/kiwanami/node-elparser
 *** ymacs @ http://www.ymacs.org/
  這幾乎是成品了吧我想。
 ** 4. 使用的工具
-*** bookmark+
+*** bookmark+ @ elpa
  這個外掛，功能非常之好，讓我可以找到3年前寫的 org mode 註解所指向的原始碼
+*** chjj/blessed @ github
+https://github.com/chjj/blessed
 
+A high-level terminal interface library for node.js
+
+emacs 中有些 termcap 相關的程式，看來有簡單的解法了
 * Project Emacgelion (English)
 
 ** 1. emacs.js @ https://github.com/jawatech/emacs.js
