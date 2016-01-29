@@ -89,6 +89,52 @@ https://github.com/kiwanami/node-elparser
 *** cflow @ http://www.gnu.org/software/cflow/
 分析原始碼間的靜態關係，另外安裝 cflow-mode.el 的話，還可得到語法高亮、進行跳轉
 
+
+Cflow mode defined in `cflow-mode.el':
+Major mode for viewing cflow output files.
+
+`n' and `p' move to next and previous functions.
+
+`f' and `b' move forward and backward at the same level,
+and `u' goes up a level; `TAB' toggles hiding the subtree at point.
+
+If the variable `cflow-display-functions' is non-nil, the current function is
+displayed in another window after each movement, and `SPC' and `DEL' scroll
+the other window (and on to the next function on reaching the end of it),
+and `1' closes the other window.
+
+If `cflow-display-functions' is set to the symbol 'narrowed, the
+window is narrowed to just that function.
+
+Setting the variable `cflow-backtrack-invisible' non-nil will ask
+to reveal, and continue from, a previous hidden section within a
+level, on reaching the end of the level.  If set to the symbol
+'no-ask, it will do it without asking.
+
+`?' shows the call stack needed to get to the current line.
+
+Key bindings are:
+key             binding
+---             -------
+
+TAB		cflow-hide-or-show-subtree
+SPC		cflow-scroll-other-window
+1		delete-other-windows
+?		cflow-get-stack
+E		cflow-edit-out-full
+R		cflow-recursion-next
+b		cflow-backward-same-level
+d		cflow-display-function-other-window
+f		cflow-forward-same-level
+n		cflow-next-line
+o		cflow-find-function-other-window
+p		cflow-previous-line
+r		cflow-recursion-root
+s		cflow-find-function
+u		cflow-up-level
+x		cflow-goto-expand
+DEL		cflow-scroll-other-window-down
+
 [[file:emacs.cflow.png]]
 *** chjj/blessed @ github
 https://github.com/chjj/blessed
