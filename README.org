@@ -85,6 +85,11 @@ https://github.com/kiwanami/node-elparser
 ** 4. 使用的工具
 *** bookmark+ @ elpa
  這個外掛，功能非常之好，讓我可以找到3年前寫的 org mode 註解所指向的原始碼
+
+*** cflow @ http://www.gnu.org/software/cflow/
+分析原始碼間的靜態關係，另外安裝 cflow-mode.el 的話，還可得到語法高亮、進行跳轉
+
+[[file:emacs.cflow.png]]
 *** chjj/blessed @ github
 https://github.com/chjj/blessed
 
