@@ -47,6 +47,10 @@ sudo apt-get install libgif-dev
 
  - 根據統計， temacs 包含以 C 寫的函數 1061 個，呼叫外部函數 2384 個(包含 library，以及巨集等)；另有以 DEFUN 巨集定義的 lisp 函數 1298 個。
 
+*** jdp/lisp-ish.js @ gist
+https://gist.github.com/jdp/1063999
+
+根據對 nodejs 本身所寫的 repl.js 的分析，可以發現它使用了 readline 模組，而普天之下的 lisp interpreter/compiler 實作，只有這位仁兄這樣幹了。它的內部處理末必見得是最好，但是最合乎 nodejs 的概念--非同步/異步/事件導向。結合 kanaka/mal 相信是比較合理的發展方向。
 *** kanaka/mal @ github (73/2104/416)
 https://github.com/kanaka/mal
 
@@ -135,30 +139,30 @@ https://github.com/chirs/slug
 
 https://github.com/inexorabletash/jisp 網頁版的不妨一試，才135行…
 
-**** maryrosecook/littlelisp
+*** maryrosecook/littlelisp
 https://github.com/maryrosecook/littlelisp
+https://www.youtube.com/watch?v=hqnTvuvXPCc
 
-這個版本是兩年前的，明確使用了 node.js ，如果 mishoo/SLip 專案不合適的話，joeattueyi/joelisp-js 就會是個很好的起點
+這個版本是兩年前的，明確使用了 node.js ，如果 mishoo/SLip 專案不合適的話，本專案就會是個很好的起點
 
 (我覺得會寫程式的女生真是很吃香…)
 
-**** joeattueyi/joelisp-js @ github
+*** joeattueyi/joelisp-js @ github
 https://github.com/joeattueyi/joelisp-js
-https://www.youtube.com/watch?v=hqnTvuvXPCc
 
-這個版本是一年前的，明確使用了 node.js ，如果 mishoo/SLip 專案不合適的話，joeattueyi/joelisp-js 就會是個很好的起點
+這個版本是一年前的，明確使用了 node.js ，如果 mishoo/SLip 專案不合適的話，本專案就會是個很好的起點
 
-**** Kraks/lisp.js/ @ github
+*** Kraks/lisp.js/ @ github
 https://github.com/Kraks/lisp.js/
 
 ditto
 
-**** dolymood/lisp.js
+*** dolymood/lisp.js
 https://github.com/dolymood/lisp.js
 
 這個專案滿有趣的，雖然已經是3年前的，不過文件寫得不錯，而且是中文
 
-**** Choltz95/microlispjs
+*** Choltz95/microlispjs
 
 https://github.com/Choltz95/microlispjs
 
