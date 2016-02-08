@@ -20,25 +20,21 @@ function PRINT(exp) {
 
 // repl
 var rep = function(str) { return PRINT(EVAL(READ(str), {})); };
-var cb = function(line){
-        if (line === null) { 
-            console.log('line === null');
-        }else{ 
-            console.log('line: '+line);
-            try {
-                if (line) { printer.println(rep(line)); }
-            } catch (exc) {
-    
-                if (exc.stack) { printer.println(exc.stack); }
-                else           { printer.println(exc); }
-            }
-        }
-        return null;
-    };
 
 // repl loop
 if (typeof require !== 'undefined' && require.main === module) {
-    // ASynchronous node.js commandline mode
 
-        var aline = readline.readline("user> ", cb);
+    // ASynchronous node.js commandline mode
+    var cb = function(line)
+	{
+        try {
+            if (line) { printer.println(rep(line)); }
+        } catch (exc) {
+
+            if (exc.stack) { printer.println(exc.stack); }
+            else           { printer.println(exc); }
+        }
+        return null;
+    }
+    var aline = readline.readline("user> ", cb);
 }
