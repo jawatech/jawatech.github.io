@@ -26,10 +26,9 @@ var rep = function(str) { return PRINT(EVAL(READ(str), {})); };
 
 // repl loop
 if (typeof require !== 'undefined' && require.main === module) {
-    // Synchronous node.js commandline mode
-    while (true) {
-        var line = readline.readline("user> ");
-        if (line === null) { break; }
+    // ASynchronous node.js commandline mode
+    var cb = function(line)
+	{
         try {
             if (line) { printer.println(rep(line)); }
         } catch (exc) {
@@ -38,4 +37,5 @@ if (typeof require !== 'undefined' && require.main === module) {
             else           { printer.println(exc); }
         }
     }
+    var aline = readline.readline("user> ", cb);
 }

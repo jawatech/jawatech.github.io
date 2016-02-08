@@ -32,8 +32,8 @@ if (typeof require !== 'undefined' && require.main === module) {
         try {
             if (line) { printer.println(rep(line)); }
         } catch (exc) {
-            if (exc instanceof reader.BlankException) { continue; }
-            if (exc.stack) { printer.println(exc.stack); }
+            if (exc instanceof reader.BlankException) { ; }
+            else if (exc.stack) { printer.println(exc.stack); }
             else           { printer.println(exc); }
         }
     }
