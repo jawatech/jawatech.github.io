@@ -268,7 +268,7 @@ $(ALL_TESTS): $$(call $$(word 2,$$(subst ^, ,$$(@)))_STEP_TO_PROG,$$(word 3,$$(s
 	      echo 'Testing $@, step file: $+, test file: $(test)'; \
               echo '$(if $(filter mal,$(impl)),$(MAL_IMPL),$(impl))'; \
 	      echo 'Running: ../runtest.py $(TEST_OPTS) $(call $(impl)_TEST_OPTS) ../$(test) -- $(call $(impl)_RUNSTEP,$(step),$(+))'; \
-	      $(PYTHON) ../runtest.py $(TEST_OPTS) $(call $(impl)_TEST_OPTS) ../$(test) -- $(call $(impl)_RUNSTEP,$(step),$(+));)))
+	      ../runtest.py $(TEST_OPTS) $(call $(impl)_TEST_OPTS) ../$(test) -- $(call $(impl)_RUNSTEP,$(step),$(+));)))
 
 test: $(ALL_TESTS)
 tests: $(ALL_TESTS)

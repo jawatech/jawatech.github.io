@@ -58,6 +58,8 @@ https://github.com/kanaka/mal
 
 **** files
 
+***** step*.js
+原程式使用了無限循環的迴圈，失去了 nodejs 原有的 nonblocking 式呼叫的精神， 因此預計使用實作 EventEmitter 的各種事件生產者來改寫。 Step0 中使用的即是 readline 函式庫。
 ***** core.js
  Add a new file core.qx and define an associative data structure ns (namespace) that maps symbols to functions. Move the numeric function definitions into this structure.
 
@@ -68,7 +70,7 @@ https://github.com/kanaka/mal
 ***** printer.js
 Add support to printer.qx to print functions values. A string literal like "#" is sufficient.
 ***** node_readline.js
-
+從命令行讀入指令。 原程式呼叫了 blocking 的 api ，本專案使用 nodejs 的原生 api 來進行 nonblocking 的呼叫，效果非常好，程式碼也更精簡。
 ***** jq_readline.js
 
 ***** interop.js

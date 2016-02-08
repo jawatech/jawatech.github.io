@@ -219,7 +219,7 @@ def assert_prompt(runner, prompts, timeout):
 
 
 # Wait for the initial prompt
-assert_prompt(r, ['user> ', 'mal-user> ', 'Emacgelion> '], args.start_timeout)
+assert_prompt(r, ['user> ', 'mal-user> '], args.start_timeout)
 
 # Send the pre-eval code if any
 if args.pre_eval:
