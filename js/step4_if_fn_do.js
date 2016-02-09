@@ -93,16 +93,17 @@ rep("(def! not (fn* (a) (if a false true)))");
 
 // repl loop
 if (typeof require !== 'undefined' && require.main === module) {
-    // Synchronous node.js commandline mode
-    while (true) {
-        var line = readline.readline("user> ");
-        if (line === null) { break; }
+    // CLIP vvv ASynchronous node.js commandline mode
+    var cb = function(line)
+	{
+	    //  ^^^ CLIP 
         try {
             if (line) { printer.println(rep(line)); }
         } catch (exc) {
-            if (exc instanceof reader.BlankException) { continue; }
+            if (exc instanceof reader.BlankException) {} else //<<< CLIP 
             if (exc.stack) { printer.println(exc.stack); }
             else           { printer.println(exc); }
         }
     }
+    var aline = readline.readline("user> ", cb); //<<< CLIP 
 }

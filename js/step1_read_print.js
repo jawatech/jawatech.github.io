@@ -26,16 +26,17 @@ var rep = function(str) { return PRINT(EVAL(READ(str), {})); };
 
 // repl loop
 if (typeof require !== 'undefined' && require.main === module) {
-    // ASynchronous node.js commandline mode
+    // CLIP vvv ASynchronous node.js commandline mode
     var cb = function(line)
 	{
+	    //  ^^^ CLIP 
         try {
             if (line) { printer.println(rep(line)); }
         } catch (exc) {
-            if (exc instanceof reader.BlankException) { ; }
-            else if (exc.stack) { printer.println(exc.stack); }
+            if (exc instanceof reader.BlankException) {} else //<<< CLIP 
+            if (exc.stack) { printer.println(exc.stack); }
             else           { printer.println(exc); }
         }
     }
-    var aline = readline.readline("user> ", cb);
+    var aline = readline.readline("user> ", cb); //<<< CLIP 
 }
