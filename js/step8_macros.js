@@ -160,23 +160,24 @@ rep("(defmacro! cond (fn* (& xs) (if (> (count xs) 0) (list 'if (first xs) (if (
 rep("(defmacro! or (fn* (& xs) (if (empty? xs) nil (if (= 1 (count xs)) (first xs) `(let* (or_FIXME ~(first xs)) (if or_FIXME or_FIXME (or ~@(rest xs))))))))");
 
 if (typeof process !== 'undefined' && process.argv.length > 2) {
-    repl_env.set(types._symbol('*ARGV*'), process.argv.slice(3));
+    repl_env.set('*ARGV*', process.argv.slice(3));
     rep('(load-file "' + process.argv[2] + '")');
     process.exit(0);
 }
 
 // repl loop
 if (typeof require !== 'undefined' && require.main === module) {
-    // Synchronous node.js commandline mode
-    while (true) {
-        var line = readline.readline("user> ");
-        if (line === null) { break; }
+    // CLIP vvv ASynchronous node.js commandline mode
+    var cb = function(line)
+	{
+	    //  ^^^ CLIP 
         try {
             if (line) { printer.println(rep(line)); }
         } catch (exc) {
-            if (exc instanceof reader.BlankException) { continue; }
+            if (exc instanceof reader.BlankException) {} else //<<< CLIP 
             if (exc.stack) { printer.println(exc.stack); }
             else           { printer.println(exc); }
         }
     }
+    var aline = readline.readline("user> ", cb); //<<< CLIP 
 }
