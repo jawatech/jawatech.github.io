@@ -1,7 +1,7 @@
 * Project Emacgelion (中文)
 ** 0. why ?
 well... because it would be cool to see emacs run in a web browser, or run with nodejs
-
+Project Emacgelion 誕生於2016年1月21日，是嘗試將 Emacs 的核心部分以 javascript 改寫，以執行在 nodejs 及各種瀏覽器的計劃。<br> Project Emacgelion is an attempt to rewrite the core of Emacs with javascript to make Emacs run under nodejs and modern web browsers.
 ** 1. emacs.js @ https://github.com/jawatech/emacs.js
  - 嘗試以 javascript 改寫 emacs ，並且以 nodejs 執行
 
