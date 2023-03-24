@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>blogging | 行有餘力，則以學文</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="1 jawatech.github.io 1.1 org2blog/org2blog: Blog from Org mode to WordPress. 1.2 novoid/lazyblorg: Blogging with Org-mode for very lazy people 1.3 bastibe/org-static-blog: A static site generator using org-mode 1.3.1 AlBasmala: Blogging with Emacs &amp; Org-mode (•̀ᴗ•́)و 1.4 Build Your Website with Org Mode - System Crafters 1.5 Blog 的搭建及其特性 1.6 使用 Emacs org-mode &#43; GitHub Pages 来写博客 - Jiayuan&rsquo;s Blog - 开发者头条 2 Blogging with org-mode and ox-hugo 3 Hugo 4 org-mode &#43; Gatsby 5 博客写作流程之工具篇： emacs, orgmode, hugo &amp; ox-hugo 6 博客由 Hexo 迁移至 Hugo 6.">
+    <meta name="generator" content="Hugo 0.111.3">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="blogging" />
+<meta property="og:description" content="1 jawatech.github.io 1.1 org2blog/org2blog: Blog from Org mode to WordPress. 1.2 novoid/lazyblorg: Blogging with Org-mode for very lazy people 1.3 bastibe/org-static-blog: A static site generator using org-mode 1.3.1 AlBasmala: Blogging with Emacs &amp; Org-mode (•̀ᴗ•́)و 1.4 Build Your Website with Org Mode - System Crafters 1.5 Blog 的搭建及其特性 1.6 使用 Emacs org-mode &#43; GitHub Pages 来写博客 - Jiayuan&rsquo;s Blog - 开发者头条 2 Blogging with org-mode and ox-hugo 3 Hugo 4 org-mode &#43; Gatsby 5 博客写作流程之工具篇： emacs, orgmode, hugo &amp; ox-hugo 6 博客由 Hexo 迁移至 Hugo 6." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://jawatech.github.io/posts/20230223-blog-2-hugo/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-03-21T00:00:00+08:00" />
+<meta property="article:modified_time" content="2023-03-21T00:00:00+08:00" />
+<meta itemprop="name" content="blogging">
+<meta itemprop="description" content="1 jawatech.github.io 1.1 org2blog/org2blog: Blog from Org mode to WordPress. 1.2 novoid/lazyblorg: Blogging with Org-mode for very lazy people 1.3 bastibe/org-static-blog: A static site generator using org-mode 1.3.1 AlBasmala: Blogging with Emacs &amp; Org-mode (•̀ᴗ•́)و 1.4 Build Your Website with Org Mode - System Crafters 1.5 Blog 的搭建及其特性 1.6 使用 Emacs org-mode &#43; GitHub Pages 来写博客 - Jiayuan&rsquo;s Blog - 开发者头条 2 Blogging with org-mode and ox-hugo 3 Hugo 4 org-mode &#43; Gatsby 5 博客写作流程之工具篇： emacs, orgmode, hugo &amp; ox-hugo 6 博客由 Hexo 迁移至 Hugo 6."><meta itemprop="datePublished" content="2023-03-21T00:00:00+08:00" />
+<meta itemprop="dateModified" content="2023-03-21T00:00:00+08:00" />
+<meta itemprop="wordCount" content="913">
+<meta itemprop="keywords" content="drill," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="blogging"/>
+<meta name="twitter:description" content="1 jawatech.github.io 1.1 org2blog/org2blog: Blog from Org mode to WordPress. 1.2 novoid/lazyblorg: Blogging with Org-mode for very lazy people 1.3 bastibe/org-static-blog: A static site generator using org-mode 1.3.1 AlBasmala: Blogging with Emacs &amp; Org-mode (•̀ᴗ•́)و 1.4 Build Your Website with Org Mode - System Crafters 1.5 Blog 的搭建及其特性 1.6 使用 Emacs org-mode &#43; GitHub Pages 来写博客 - Jiayuan&rsquo;s Blog - 开发者头条 2 Blogging with org-mode and ox-hugo 3 Hugo 4 org-mode &#43; Gatsby 5 博客写作流程之工具篇： emacs, orgmode, hugo &amp; ox-hugo 6 博客由 Hexo 迁移至 Hugo 6."/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        行有餘力，則以學文
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">blogging</h1>
+      
+      <p class="tracked">
+        By <strong>Sigmund Tzeng</strong>
+      </p>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2023-03-21T00:00:00+08:00">March 21, 2023</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<ul>
+<li><!-- raw HTML omitted -->1<!-- raw HTML omitted --> <a href="#jawatech-dot-github-dot-io">jawatech.github.io</a>
+<ul>
+<li><!-- raw HTML omitted -->1.1<!-- raw HTML omitted --> <a href="#org2blog-org2blog-blog-from-org-mode-to-wordpress-dot">org2blog/org2blog: Blog from Org mode to WordPress.</a></li>
+<li><!-- raw HTML omitted -->1.2<!-- raw HTML omitted --> <a href="#novoid-lazyblorg-blogging-with-org-mode-for-very-lazy-people">novoid/lazyblorg: Blogging with Org-mode for very lazy people</a></li>
+<li><!-- raw HTML omitted -->1.3<!-- raw HTML omitted --> <a href="#bastibe-org-static-blog-a-static-site-generator-using-org-mode">bastibe/org-static-blog: A static site generator using org-mode</a>
+<ul>
+<li><!-- raw HTML omitted -->1.3.1<!-- raw HTML omitted --> <a href="#albasmala-blogging-with-emacs-and-org-mode--%CC%80%E1%B4%97-%CC%81--%D9%88">AlBasmala: Blogging with Emacs &amp; Org-mode (•̀ᴗ•́)و</a></li>
+</ul>
+</li>
+<li><!-- raw HTML omitted -->1.4<!-- raw HTML omitted --> <a href="#build-your-website-with-org-mode-system-crafters">Build Your Website with Org Mode - System Crafters</a></li>
+<li><!-- raw HTML omitted -->1.5<!-- raw HTML omitted --> <a href="#blog-%E7%9A%84%E6%90%AD%E5%BB%BA%E5%8F%8A%E5%85%B6%E7%89%B9%E6%80%A7">Blog 的搭建及其特性</a></li>
+<li><!-- raw HTML omitted -->1.6<!-- raw HTML omitted --> <a href="#%E4%BD%BF%E7%94%A8-emacs-org-mode-plus-github-pages-%E6%9D%A5%E5%86%99%E5%8D%9A%E5%AE%A2-jiayuan-s-blog-%E5%BC%80%E5%8F%91%E8%80%85%E5%A4%B4%E6%9D%A1">使用 Emacs org-mode + GitHub Pages 来写博客 - Jiayuan&rsquo;s Blog - 开发者头条</a></li>
+</ul>
+</li>
+<li><!-- raw HTML omitted -->2<!-- raw HTML omitted --> <a href="#blogging-with-org-mode-and-ox-hugo">Blogging with org-mode and ox-hugo</a></li>
+<li><!-- raw HTML omitted -->3<!-- raw HTML omitted --> <a href="#hugo">Hugo</a></li>
+<li><!-- raw HTML omitted -->4<!-- raw HTML omitted --> <a href="#org-mode-plus-gatsby">org-mode + Gatsby</a></li>
+<li><!-- raw HTML omitted -->5<!-- raw HTML omitted --> <a href="#%E5%8D%9A%E5%AE%A2%E5%86%99%E4%BD%9C%E6%B5%81%E7%A8%8B%E4%B9%8B%E5%B7%A5%E5%85%B7%E7%AF%87-emacs-orgmode-hugo-and-ox-hugo">博客写作流程之工具篇： emacs, orgmode, hugo &amp; ox-hugo</a></li>
+<li><!-- raw HTML omitted -->6<!-- raw HTML omitted --> <a href="#%E5%8D%9A%E5%AE%A2%E7%94%B1-hexo-%E8%BF%81%E7%A7%BB%E8%87%B3-hugo">博客由 Hexo 迁移至 Hugo</a>
+<ul>
+<li><!-- raw HTML omitted -->6.1<!-- raw HTML omitted --> <a href="#run">run</a></li>
+<li><!-- raw HTML omitted -->6.2<!-- raw HTML omitted --> <a href="#install-choco">install choco</a></li>
+<li><!-- raw HTML omitted -->6.3<!-- raw HTML omitted --> <a href="#install-hugo">install Hugo</a></li>
+<li><!-- raw HTML omitted -->6.4<!-- raw HTML omitted --> <a href="#theme-%E6%9E%B6%E7%AB%99%E6%99%82%E5%9F%B7%E8%A1%8C%E4%B8%80%E6%AC%A1%E5%8D%B3%E5%8F%AF">theme 架站時執行一次即可</a>
+<ul>
+<li><!-- raw HTML omitted -->6.4.1<!-- raw HTML omitted --> <a href="#academic">academic</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><!-- raw HTML omitted -->7<!-- raw HTML omitted --> <a href="#%E7%94%A8github%E4%BE%86%E5%B1%95%E7%A4%BA%E8%87%AA%E5%B7%B1%E5%AF%AB%E5%A5%BD%E7%9A%84%E5%89%8D%E7%AB%AF%E7%B6%B2%E9%A0%81">用github來展示自己寫好的前端網頁</a>
+<ul>
+<li><!-- raw HTML omitted -->7.1<!-- raw HTML omitted --> <a href="#%E5%A6%82%E4%BD%95%E5%9C%A8github%E5%BB%BA%E7%AB%8B%E9%9D%9C%E6%85%8B%E7%B6%B2%E7%AB%99">如何在GitHub建立靜態網站</a></li>
+<li><!-- raw HTML omitted -->7.2<!-- raw HTML omitted --> <a href="#%E7%99%BC%E5%B8%83%E4%B8%80%E5%80%8B%E8%87%AA%E5%B7%B1%E7%9A%84%E7%B6%B2%E9%A0%81%E5%90%A7-github%E5%BB%BA%E7%AB%8B%E9%9D%9C%E6%85%8B%E7%B6%B2%E9%A0%81%E6%95%99%E5%AD%B8">發布一個自己的網頁吧：github建立靜態網頁教學</a></li>
+</ul>
+</li>
+<li><!-- raw HTML omitted -->8<!-- raw HTML omitted --> <a href="#my-blogging-setup-with-emacs-and-org-mode-andrey-listopadov">My blogging setup with Emacs and Org Mode · Andrey Listopadov</a></li>
+<li><!-- raw HTML omitted -->9<!-- raw HTML omitted --> <a href="#create-websites-with-emacs-blogging-with-org-mode-and-hugo">Create Websites with Emacs: Blogging with Org mode and Hugo</a></li>
+<li><!-- raw HTML omitted -->10<!-- raw HTML omitted --> <a href="#%E5%A6%82%E4%BD%95%E5%88%A9%E7%94%A8-org-mode-%E5%86%99%E5%8D%9A%E5%AE%A2-%E7%9F%A5%E4%B9%8E">如何利用 org mode 写博客 - 知乎</a>
+<ul>
+<li><!-- raw HTML omitted -->10.1<!-- raw HTML omitted --> <a href="#%E5%96%AE%E6%96%87%E6%AA%94%E5%AF%AB%E6%B3%95%E5%8F%83-%E5%8D%9A%E5%AE%A2%E5%86%99%E4%BD%9C%E6%B5%81%E7%A8%8B%E4%B9%8B%E5%B7%A5%E5%85%B7%E7%AF%87-emacs-orgmode-hugo-and-ox-hugo-%E8%B4%A4%E6%B0%91%E7%9A%84%E5%8D%9A%E5%AE%A2">單文檔寫法參 博客写作流程之工具篇： emacs, orgmode, hugo &amp; ox-hugo - 贤民的博客</a></li>
+<li><!-- raw HTML omitted -->10.2<!-- raw HTML omitted --> <a href="#hugo%E5%8F%83-%E4%BD%BF%E7%94%A8-hugo-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99-%E5%8D%9A%E5%AE%A2-%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5-%E5%B9%B6%E5%8F%91%E5%B8%83%E5%88%B0-github-%E4%B8%8A-kinredon-s-blog">hugo參 使用 Hugo 搭建个人网站（博客、个人主页）并发布到 Github 上 - kinredon&rsquo;s blog</a></li>
+</ul>
+</li>
+<li><!-- raw HTML omitted -->11<!-- raw HTML omitted --> <a href="#%E7%94%A8org-mode-plus-hugo%E5%86%99%E5%8D%9A%E5%AE%A2-%E5%B9%B6%E9%80%9A%E8%BF%87github-action%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2%E5%88%B0github-pages-superbear-s-blog">用Org Mode + Hugo写博客，并通过Github Action自动部署到Github Pages - superbear&rsquo;s blog</a></li>
+<li><!-- raw HTML omitted -->12<!-- raw HTML omitted --> <a href="#%E6%8C%87%E5%AE%9A-org-hugo-default-section-directory">指定 org-hugo-default-section-directory</a></li>
+<li><!-- raw HTML omitted -->13<!-- raw HTML omitted --> <a href="#trouble-shooting">trouble shooting</a>
+<ul>
+<li><!-- raw HTML omitted -->13.1<!-- raw HTML omitted --> <a href="#unable-to-resolve-link-aborting-int">Unable to resolve link; aborting: &ldquo;int&rdquo;</a>
+<ul>
+<li><!-- raw HTML omitted -->13.1.1<!-- raw HTML omitted --> <a href="#%E5%A6%82%E4%BD%95%E8%A7%A3%E5%86%B3%E6%97%A0%E6%B3%95%E8%A7%A3%E6%9E%90%E9%93%BE%E6%8E%A5%E8%80%8C%E6%97%A0%E6%B3%95%E5%AF%BC%E5%87%BA%E7%9A%84%E9%97%AE%E9%A2%98-ian-s-site">如何解决无法解析链接而无法导出的问题 | Ian&rsquo;s Site</a></li>
+<li><!-- raw HTML omitted -->13.1.2<!-- raw HTML omitted --> <a href="#org-export-resolve-id-link">org-export-resolve-id-link</a></li>
+<li><!-- raw HTML omitted -->13.1.3<!-- raw HTML omitted --> <a href="#%E8%A7%A3%E6%B1%BA%E6%96%B9%E6%A1%88">解決方案</a></li>
+</ul>
+</li>
+<li><!-- raw HTML omitted -->13.2<!-- raw HTML omitted --> <a href="#org-find-olp-heading-not-found-on-level">org-find-olp: Heading not found on level</a></li>
+<li><!-- raw HTML omitted -->13.3<!-- raw HTML omitted --> <a href="#loveit-%E4%B8%BB%E9%A1%8C">LoveIt 主題</a></li>
+</ul>
+</li>
+</ul>
+<!-- raw HTML omitted -->
+<h2 id="jawatech-dot-github-dot-io"><!-- raw HTML omitted -->1<!-- raw HTML omitted --> jawatech.github.io</h2>
+<h3 id="org2blog-org2blog-blog-from-org-mode-to-wordpress-dot"><!-- raw HTML omitted -->1.1<!-- raw HTML omitted --> <a href="https://github.com/org2blog/org2blog">org2blog/org2blog: Blog from Org mode to WordPress.</a></h3>
+<p>wordpress 專武 <!-- raw HTML omitted --></p>
+<h3 id="novoid-lazyblorg-blogging-with-org-mode-for-very-lazy-people"><!-- raw HTML omitted -->1.2<!-- raw HTML omitted --> <a href="https://github.com/novoid/lazyblorg">novoid/lazyblorg: Blogging with Org-mode for very lazy people</a></h3>
+<p>不太確定…好處是會收集 org 檔中指定的 title <!-- raw HTML omitted --></p>
+<h3 id="bastibe-org-static-blog-a-static-site-generator-using-org-mode"><!-- raw HTML omitted -->1.3<!-- raw HTML omitted --> <a href="https://github.com/bastibe/org-static-blog">bastibe/org-static-blog: A static site generator using org-mode</a></h3>
+<p>Blog posts contain individual entries. Every org file in org-static-blog-posts-directory is one blog post. Each blog post is rendered as its own HTML page. <!-- raw HTML omitted --></p>
+<h4 id="albasmala-blogging-with-emacs-and-org-mode--̀ᴗ-́--و"><!-- raw HTML omitted -->1.3.1<!-- raw HTML omitted --> AlBasmala: Blogging with Emacs &amp; Org-mode (•̀ᴗ•́)و</h4>
+<h3 id="build-your-website-with-org-mode-system-crafters"><!-- raw HTML omitted -->1.4<!-- raw HTML omitted --> <a href="https://systemcrafters.net/publishing-websites-with-org-mode/building-the-site/">Build Your Website with Org Mode - System Crafters</a></h3>
+<h3 id="blog-的搭建及其特性"><!-- raw HTML omitted -->1.5<!-- raw HTML omitted --> Blog 的搭建及其特性</h3>
+<h3 id="使用-emacs-org-mode-plus-github-pages-来写博客-jiayuan-s-blog-开发者头条"><!-- raw HTML omitted -->1.6<!-- raw HTML omitted --> <a href="https://toutiao.io/posts/4203/app_preview">使用 Emacs org-mode + GitHub Pages 来写博客 - Jiayuan&rsquo;s Blog - 开发者头条</a></h3>
+<h2 id="blogging-with-org-mode-and-ox-hugo"><!-- raw HTML omitted -->2<!-- raw HTML omitted --> Blogging with org-mode and ox-hugo</h2>
+<p><a href="https://www.shanesveller.com/blog/2018/02/13/blogging-with-org-mode-and-ox-hugo/">Blogging with org-mode and ox-hugo // Shane Sveller</a> <!-- raw HTML omitted --></p>
+<h2 id="hugo"><!-- raw HTML omitted -->3<!-- raw HTML omitted --> Hugo</h2>
+<p><a href="https://gohugo.io/">Hugo</a> <!-- raw HTML omitted -->
+Hugo fast static blog engine supports Org files natively. <!-- raw HTML omitted -->
+<a href="https://ox-hugo.scripter.co">ox-hugo</a> <!-- raw HTML omitted --></p>
+<p>An Org exporter backend that exports to <a href="https://gohugo.io">Hugo</a>/Blackfriday-friendly Markdown, along with Hugo front-matter in TOML or YAML. This package was developed after being aware of the fact that Hugo natively supports <!-- raw HTML omitted -->
+parsing Org (but that support is only partial).. read more on <a href="https://ox-hugo.scripter.co/doc/why-ox-hugo/">Why ox-hugo?</a>  <!-- raw HTML omitted --></p>
+<p>ox-hugo enables writing posts for Hugo in native Org mode. It allows converting your existing Org files to blog posts with almost no modification. Two common Org blogging flows are supported: <!-- raw HTML omitted --></p>
+<ul>
+<li>Exporting multiple Org sub-trees from a single file to multiple Hugo posts. With this feature, one can produce a whole web site from a single Org file (the <a href="https://ox-hugo.scripter.co">ox-hugo documentation site</a> is one such example, which is <!-- raw HTML omitted --></li>
+</ul>
+<p>generated from <a href="https://raw.githubusercontent.com/kaushalmodi/ox-hugo/master/doc/ox-hugo-manual.org">this one Org file</a>). It also leverages Org tag and property inheritance, and much more! <!-- raw HTML omitted --></p>
+<ul>
+<li>Exporting a single Org file to a single Hugo post. <!-- raw HTML omitted --></li>
+</ul>
+<p>See the package&rsquo;s website for complete documentation, and the <a href="https://ox-hugo.scripter.co/test/">test site</a> [<a href="https://github.com/kaushalmodi/ox-hugo/tree/master/test/site/content-org">source</a>] for hundreds of test cases and feature demonstrations. <!-- raw HTML omitted --></p>
+<h2 id="org-mode-plus-gatsby"><!-- raw HTML omitted -->4<!-- raw HTML omitted --> org-mode + Gatsby</h2>
+<p><a href="https://github.com/orgapp/gatsby-orga">https://github.com/orgapp/gatsby-orga</a> <!-- raw HTML omitted --></p>
+<p><a href="https://github.com/orgapp/orgajs">https://github.com/orgapp/orgajs</a> <!-- raw HTML omitted --></p>
+<p><a href="https://www.gatsbyjs.org/">https://www.gatsbyjs.org/</a> <!-- raw HTML omitted --></p>
+<h2 id="博客写作流程之工具篇-emacs-orgmode-hugo-and-ox-hugo"><!-- raw HTML omitted -->5<!-- raw HTML omitted --> 博客写作流程之工具篇： emacs, orgmode, hugo &amp; ox-hugo</h2>
+<p><a href="https://www.xianmin.org/post/ox-hugo/">https://www.xianmin.org/post/ox-hugo/</a> <!-- raw HTML omitted --></p>
+<h2 id="博客由-hexo-迁移至-hugo"><!-- raw HTML omitted -->6<!-- raw HTML omitted --> 博客由 Hexo 迁移至 Hugo</h2>
+<p><a href="https://blindwith.science/2019/08/447.html/">https://blindwith.science/2019/08/447.html/</a> <!-- raw HTML omitted --></p>
+<h3 id="run"><!-- raw HTML omitted -->6.1<!-- raw HTML omitted --> run</h3>
+<p>使用一般使用者身分，打開 cmd <!-- raw HTML omitted -->
+cd %USERPROFILE%\Dropbox\jawatech\My_Website #此處 My_Website 是站名 <!-- raw HTML omitted -->
+hugo server <!-- raw HTML omitted -->
+<a href="http://localhost:1313/">http://localhost:1313/</a> <!-- raw HTML omitted -->
+<a href="https://sourcethemes.com/academic/docs/get-started/">https://sourcethemes.com/academic/docs/get-started/</a> <!-- raw HTML omitted --></p>
+<h3 id="install-choco"><!-- raw HTML omitted -->6.2<!-- raw HTML omitted --> install choco</h3>
+<p><a href="https://guangchuangyu.github.io/cn/2018/06/chocolatey/">https://guangchuangyu.github.io/cn/2018/06/chocolatey/</a> <!-- raw HTML omitted -->
+以管理員身份打開 powershell <!-- raw HTML omitted -->
+Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString(&lsquo;<a href="https://chocolatey.org/install.ps1'">https://chocolatey.org/install.ps1'</a>)) <!-- raw HTML omitted -->
+The packages themselves go to &lsquo;C:\ProgramData\chocolatey\lib&rsquo; <!-- raw HTML omitted -->
+(i.e. C:\ProgramData\chocolatey\lib\yourPackageName). <!-- raw HTML omitted -->
+A shim file for the command line goes to &lsquo;C:\ProgramData\chocolatey\bin&rsquo; <!-- raw HTML omitted -->
+and points to an executable in &lsquo;C:\ProgramData\chocolatey\lib\yourPackageName&rsquo;. <!-- raw HTML omitted --></p>
+<h3 id="install-hugo"><!-- raw HTML omitted -->6.3<!-- raw HTML omitted --> install Hugo</h3>
+<p><a href="https://blog.yowko.com/windows-10-hugo/">https://blog.yowko.com/windows-10-hugo/</a> <!-- raw HTML omitted --></p>
+<p>choco install hugo-extended &ndash;force -y <!-- raw HTML omitted --></p>
+<p>The install of hugo-extended was successful. <!-- raw HTML omitted -->
+Software installed to &lsquo;C:\ProgramData\chocolatey\lib\hugo-extended\tools&rsquo; <!-- raw HTML omitted --></p>
+<p>Chocolatey installed 1/1 packages. <!-- raw HTML omitted -->
+See the log for details (C:\ProgramData\chocolatey\logs\chocolatey.log). <!-- raw HTML omitted --></p>
+<h3 id="theme-架站時執行一次即可"><!-- raw HTML omitted -->6.4<!-- raw HTML omitted --> theme 架站時執行一次即可</h3>
+<h4 id="academic"><!-- raw HTML omitted -->6.4.1<!-- raw HTML omitted --> academic</h4>
+<p><a href="https://themes.gohugo.io/academic/">https://themes.gohugo.io/academic/</a> <!-- raw HTML omitted -->
+<a href="https://zlearning.netlify.com/linux/emacs/emacs-hugo-academic.html">https://zlearning.netlify.com/linux/emacs/emacs-hugo-academic.html</a> <!-- raw HTML omitted -->
+cd %USERPROFILE%/Dropbox/jawatech <!-- raw HTML omitted -->
+git clone <a href="https://github.com/jawatech/academic-kickstart.git">https://github.com/jawatech/academic-kickstart.git</a> My_Website <!-- raw HTML omitted -->
+cd My_Website <!-- raw HTML omitted -->
+git submodule update &ndash;init &ndash;recursive <!-- raw HTML omitted -->
+hugo server <!-- raw HTML omitted --></p>
+<h5 id="update"><!-- raw HTML omitted -->6.4.1.1<!-- raw HTML omitted --> update</h5>
+<p>git submodule update &ndash;remote &ndash;merge <!-- raw HTML omitted -->
+cd themes/academic <!-- raw HTML omitted -->
+git checkout &lt;VERSION&gt; <!-- raw HTML omitted -->
+where &lt;VERSION&gt; is the version in the form vX.X.X that you wish to update to. <!-- raw HTML omitted -->
+Otherwise, to update to the latest development version, substitute &lt;VERSION&gt; with master. <!-- raw HTML omitted --></p>
+<h2 id="用github來展示自己寫好的前端網頁"><!-- raw HTML omitted -->7<!-- raw HTML omitted --> 用github來展示自己寫好的前端網頁</h2>
+<p><a href="https://noootown.wordpress.com/2015/07/19/github-frontend/">https://noootown.wordpress.com/2015/07/19/github-frontend/</a> <!-- raw HTML omitted -->
+或是看官網 <a href="https://pages.github.com/">https://pages.github.com/</a> <!-- raw HTML omitted --></p>
+<ol>
+<li>建立新的 repo, 假設為 twmle，帳號名為 jawatech <!-- raw HTML omitted --></li>
+<li>建立&amp;進入本地端的對應目錄 twmle | git clone <!-- raw HTML omitted --></li>
+<li>執行以下指令 <!-- raw HTML omitted --></li>
+</ol>
+<p>echo &ldquo;# twmle&rdquo; &gt;&gt; README.md <!-- raw HTML omitted -->
+git init <!-- raw HTML omitted -->
+git add README.md <!-- raw HTML omitted -->
+git commit -m &ldquo;first commit&rdquo; <!-- raw HTML omitted -->
+git remote add origin <a href="https://github.com/jawatech/twmle.git">https://github.com/jawatech/twmle.git</a> <!-- raw HTML omitted -->
+git push -u origin master <!-- raw HTML omitted --></p>
+<ol>
+<li>打開 <a href="https://github.com/jawatech/twmle/settings">https://github.com/jawatech/twmle/settings</a> ， GitHub Pages 下的 Source 選取 master branch 並按下 Save <!-- raw HTML omitted --></li>
+<li>打開 <a href="https://jawatech.github.io/twmle/">https://jawatech.github.io/twmle/</a> <!-- raw HTML omitted --></li>
+</ol>
+<h3 id="如何在github建立靜態網站"><!-- raw HTML omitted -->7.1<!-- raw HTML omitted --> 如何在GitHub建立靜態網站</h3>
+<p><a href="http://ithelp.ithome.com.tw/articles/10171911">http://ithelp.ithome.com.tw/articles/10171911</a> <!-- raw HTML omitted --></p>
+<h3 id="發布一個自己的網頁吧-github建立靜態網頁教學"><!-- raw HTML omitted -->7.2<!-- raw HTML omitted --> 發布一個自己的網頁吧：github建立靜態網頁教學</h3>
+<p><a href="http://boompie0715.blogspot.tw/2015/09/github.html">http://boompie0715.blogspot.tw/2015/09/github.html</a> <!-- raw HTML omitted --></p>
+<h2 id="my-blogging-setup-with-emacs-and-org-mode-andrey-listopadov"><!-- raw HTML omitted -->8<!-- raw HTML omitted --> <a href="https://andreyorst.gitlab.io/posts/2022-10-16-my-blogging-setup-with-emacs-and-org-mode/">My blogging setup with Emacs and Org Mode · Andrey Listopadov</a></h2>
+<p><strong>提及 submodule 在 theme 的使用</strong> <!-- raw HTML omitted -->
+文長、較近期 <!-- raw HTML omitted --></p>
+<h2 id="create-websites-with-emacs-blogging-with-org-mode-and-hugo"><!-- raw HTML omitted -->9<!-- raw HTML omitted --> <a href="https://lucidmanager.org/productivity/create-websites-with-org-mode-and-hugo/">Create Websites with Emacs: Blogging with Org mode and Hugo</a></h2>
+<p>未直接提及 submodule 在 theme 的使用，但提到 theme 的設置時，所指向的連結 <a href="https://gohugo.io/getting-started/quick-start/">Quick Start | Hugo</a> 仍然是使用 submodule <!-- raw HTML omitted -->
+<strong>提到內部連結解法</strong> ，但也提到匯出圖片的問題，以及 drawer 等 property 會被匯出的問題 <!-- raw HTML omitted --></p>
+<h2 id="如何利用-org-mode-写博客-知乎"><!-- raw HTML omitted -->10<!-- raw HTML omitted --> <a href="https://zhuanlan.zhihu.com/p/417259090">如何利用 org mode 写博客 - 知乎</a></h2>
+<p>使用 easy-hugo 進行預覽，但未直接提及 submodule 在 theme 的使用 <!-- raw HTML omitted --></p>
+<h3 id="單文檔寫法參-博客写作流程之工具篇-emacs-orgmode-hugo-and-ox-hugo-贤民的博客"><!-- raw HTML omitted -->10.1<!-- raw HTML omitted --> 單文檔寫法參 <a href="https://www.xianmin.org/post/ox-hugo/">博客写作流程之工具篇： emacs, orgmode, hugo &amp; ox-hugo - 贤民的博客</a></h3>
+<h3 id="hugo參-使用-hugo-搭建个人网站-博客-个人主页-并发布到-github-上-kinredon-s-blog"><!-- raw HTML omitted -->10.2<!-- raw HTML omitted --> hugo參 <a href="https://kinredon.github.io/post/how-to-publish-personal-website-on-github/">使用 Hugo 搭建个人网站（博客、个人主页）并发布到 Github 上 - kinredon&rsquo;s blog</a></h3>
+<p>終於提及 submodulev 在 theme 的使用 <!-- raw HTML omitted --></p>
+<h2 id="用org-mode-plus-hugo写博客-并通过github-action自动部署到github-pages-superbear-s-blog"><!-- raw HTML omitted -->11<!-- raw HTML omitted --> <a href="https://superbear.github.io/post/2021/11/use-org-mode-and-hugo-to-write-blog/">用Org Mode + Hugo写博客，并通过Github Action自动部署到Github Pages - superbear&rsquo;s blog</a></h2>
+<p>提及 submodule 在 theme 的使用 <!-- raw HTML omitted -->
+未使用 easy-hugo 進行預覽 <!-- raw HTML omitted --></p>
+<h2 id="指定-org-hugo-default-section-directory"><!-- raw HTML omitted -->12<!-- raw HTML omitted --> 指定 org-hugo-default-section-directory</h2>
+<p>除了少數初期的 theme，與預設的 posts 是相同的，其它大部分都得要重設，例如改為單數形的 post <!-- raw HTML omitted --></p>
+<h2 id="trouble-shooting"><!-- raw HTML omitted -->13<!-- raw HTML omitted --> trouble shooting</h2>
+<h3 id="unable-to-resolve-link-aborting-int"><!-- raw HTML omitted -->13.1<!-- raw HTML omitted --> Unable to resolve link; aborting: &ldquo;int&rdquo;</h3>
+<h4 id="如何解决无法解析链接而无法导出的问题-ian-s-site"><!-- raw HTML omitted -->13.1.1<!-- raw HTML omitted --> <a href="https://ianying.vercel.app/post/2022/07/how-to-resolve-broken-link-on-ox-hugo-export/">如何解决无法解析链接而无法导出的问题 | Ian&rsquo;s Site</a></h4>
+<p>應該是來自於這篇 <a href="https://github.com/kaushalmodi/ox-hugo/issues/447">ox-hugo yields &ldquo;Unable to resolve link; aborting: ID_LINK&rdquo; with ID outside of subtree, and broken-links:mark or :t · Issue #447 · kaushalmodi/ox-hugo</a> <!-- raw HTML omitted --></p>
+<h4 id="org-export-resolve-id-link"><!-- raw HTML omitted -->13.1.2<!-- raw HTML omitted --> org-export-resolve-id-link</h4>
+<p>說明文件中有這行 Throw an error if no match is found. <!-- raw HTML omitted --></p>
+<p>實際拋出錯誤的地方則在 (signal &lsquo;org-link-broken (list id)) <!-- raw HTML omitted --></p>
+<p>上一層呼叫函數為 org-export-resolve-link <!-- raw HTML omitted --></p>
+<h4 id="解決方案"><!-- raw HTML omitted -->13.1.3<!-- raw HTML omitted --> 解決方案</h4>
+<h5 id="刪除造成問題的文字-連結"><!-- raw HTML omitted -->13.1.3.1<!-- raw HTML omitted --> 刪除造成問題的文字/連結</h5>
+<p>執行 M-x toggle-debug-on-error 後發現，錯誤發生在 /post/&lt;id：int&gt;這行，把冒號改成全形暫時解決這個問題，具體原因未知 <!-- raw HTML omitted --></p>
+<p>照說要當成連結的話，必需要是兩個方括號帶頭。 <!-- raw HTML omitted --></p>
+<h5 id="關閉搜尋連結的功能"><!-- raw HTML omitted -->13.1.3.2<!-- raw HTML omitted --> 關閉搜尋連結的功能</h5>
+<h6 id="org-id-track-globally-關不掉"><!-- raw HTML omitted -->13.1.3.2.1<!-- raw HTML omitted --> ‘org-id-track-globally’ 關不掉</h6>
+<h3 id="org-find-olp-heading-not-found-on-level"><!-- raw HTML omitted -->13.2<!-- raw HTML omitted --> org-find-olp: Heading not found on level</h3>
+<p>主標題不能在後面有 <!-- raw HTML omitted -->[/]<!-- raw HTML omitted --> 之類的計數器，本身不能是連結 <!-- raw HTML omitted --></p>
+<h3 id="loveit-主題"><!-- raw HTML omitted -->13.3<!-- raw HTML omitted --> LoveIt 主題</h3>
+<p>hugo 版本必需在 0.74 以下 <!-- raw HTML omitted --></p>
+<p>經choco 安裝 hugo 後，要改版本的方式參 <a href="https://github.com/chocolatey/choco/issues/1909">Install specific package version like package@1.2.3 · Issue #1909 · chocolatey/choco</a> <!-- raw HTML omitted --></p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="/tags/drill/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">drill</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://jawatech.github.io/" >
+    &copy;  行有餘力，則以學文 2023 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

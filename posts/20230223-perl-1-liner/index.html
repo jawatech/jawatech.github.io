@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>使用perl one liner進行檔案搜尋取代的流程(SOP) | 行有餘力，則以學文</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content=" 1 行有餘力 則以學文: 使用perl one liner進行檔案搜尋取代的流程(SOP) 2 行有餘力 則以學文: 使用 perl one liner 進行檔案搜尋取代的流程(SOP)(二) 3 行有餘力 則以學文: 使用 perl one liner 進行檔案搜尋取代的流程 ( SOP ) ( 三 ) 1 行有餘力 則以學文: 使用perl one liner進行檔案搜尋取代的流程(SOP) 2 行有餘力 則以學文: 使用 perl one liner 進行檔案搜尋取代的流程(SOP)(二) 3 行有餘力 則以學文: 使用 perl one liner 進行檔案搜尋取代的流程 ( SOP ) ( 三 ) ">
+    <meta name="generator" content="Hugo 0.111.3">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="使用perl one liner進行檔案搜尋取代的流程(SOP)" />
+<meta property="og:description" content=" 1 行有餘力 則以學文: 使用perl one liner進行檔案搜尋取代的流程(SOP) 2 行有餘力 則以學文: 使用 perl one liner 進行檔案搜尋取代的流程(SOP)(二) 3 行有餘力 則以學文: 使用 perl one liner 進行檔案搜尋取代的流程 ( SOP ) ( 三 ) 1 行有餘力 則以學文: 使用perl one liner進行檔案搜尋取代的流程(SOP) 2 行有餘力 則以學文: 使用 perl one liner 進行檔案搜尋取代的流程(SOP)(二) 3 行有餘力 則以學文: 使用 perl one liner 進行檔案搜尋取代的流程 ( SOP ) ( 三 ) " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://jawatech.github.io/posts/20230223-perl-1-liner/" /><meta property="article:section" content="posts" />
+
+
+<meta itemprop="name" content="使用perl one liner進行檔案搜尋取代的流程(SOP)">
+<meta itemprop="description" content=" 1 行有餘力 則以學文: 使用perl one liner進行檔案搜尋取代的流程(SOP) 2 行有餘力 則以學文: 使用 perl one liner 進行檔案搜尋取代的流程(SOP)(二) 3 行有餘力 則以學文: 使用 perl one liner 進行檔案搜尋取代的流程 ( SOP ) ( 三 ) 1 行有餘力 則以學文: 使用perl one liner進行檔案搜尋取代的流程(SOP) 2 行有餘力 則以學文: 使用 perl one liner 進行檔案搜尋取代的流程(SOP)(二) 3 行有餘力 則以學文: 使用 perl one liner 進行檔案搜尋取代的流程 ( SOP ) ( 三 ) ">
+
+<meta itemprop="wordCount" content="56">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="使用perl one liner進行檔案搜尋取代的流程(SOP)"/>
+<meta name="twitter:description" content=" 1 行有餘力 則以學文: 使用perl one liner進行檔案搜尋取代的流程(SOP) 2 行有餘力 則以學文: 使用 perl one liner 進行檔案搜尋取代的流程(SOP)(二) 3 行有餘力 則以學文: 使用 perl one liner 進行檔案搜尋取代的流程 ( SOP ) ( 三 ) 1 行有餘力 則以學文: 使用perl one liner進行檔案搜尋取代的流程(SOP) 2 行有餘力 則以學文: 使用 perl one liner 進行檔案搜尋取代的流程(SOP)(二) 3 行有餘力 則以學文: 使用 perl one liner 進行檔案搜尋取代的流程 ( SOP ) ( 三 ) "/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        行有餘力，則以學文
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">使用perl one liner進行檔案搜尋取代的流程(SOP)</h1>
+      
+      <p class="tracked">
+        By <strong>Sigmund Tzeng</strong>
+      </p>
+      
+      
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<ul>
+<li><!-- raw HTML omitted -->1<!-- raw HTML omitted --> <a href="#%E8%A1%8C%E6%9C%89%E9%A4%98%E5%8A%9B-%E5%89%87%E4%BB%A5%E5%AD%B8%E6%96%87-%E4%BD%BF%E7%94%A8perl-one-liner%E9%80%B2%E8%A1%8C%E6%AA%94%E6%A1%88%E6%90%9C%E5%B0%8B%E5%8F%96%E4%BB%A3%E7%9A%84%E6%B5%81%E7%A8%8B--sop">行有餘力 則以學文: 使用perl one liner進行檔案搜尋取代的流程(SOP)</a></li>
+<li><!-- raw HTML omitted -->2<!-- raw HTML omitted --> <a href="#%E8%A1%8C%E6%9C%89%E9%A4%98%E5%8A%9B-%E5%89%87%E4%BB%A5%E5%AD%B8%E6%96%87-%E4%BD%BF%E7%94%A8-perl-one-liner-%E9%80%B2%E8%A1%8C%E6%AA%94%E6%A1%88%E6%90%9C%E5%B0%8B%E5%8F%96%E4%BB%A3%E7%9A%84%E6%B5%81%E7%A8%8B--sop----%E4%BA%8C">行有餘力 則以學文: 使用 perl one liner 進行檔案搜尋取代的流程(SOP)(二)</a></li>
+<li><!-- raw HTML omitted -->3<!-- raw HTML omitted --> <a href="#%E8%A1%8C%E6%9C%89%E9%A4%98%E5%8A%9B-%E5%89%87%E4%BB%A5%E5%AD%B8%E6%96%87-%E4%BD%BF%E7%94%A8-perl-one-liner-%E9%80%B2%E8%A1%8C%E6%AA%94%E6%A1%88%E6%90%9C%E5%B0%8B%E5%8F%96%E4%BB%A3%E7%9A%84%E6%B5%81%E7%A8%8B--sop----%E4%B8%89">行有餘力 則以學文: 使用 perl one liner 進行檔案搜尋取代的流程 ( SOP ) ( 三 )</a></li>
+</ul>
+<!-- raw HTML omitted -->
+<h2 id="行有餘力-則以學文-使用perl-one-liner進行檔案搜尋取代的流程--sop"><!-- raw HTML omitted -->1<!-- raw HTML omitted --> 行有餘力 則以學文: 使用perl one liner進行檔案搜尋取代的流程(SOP)</h2>
+<h2 id="行有餘力-則以學文-使用-perl-one-liner-進行檔案搜尋取代的流程--sop----二"><!-- raw HTML omitted -->2<!-- raw HTML omitted --> 行有餘力 則以學文: 使用 perl one liner 進行檔案搜尋取代的流程(SOP)(二)</h2>
+<h2 id="行有餘力-則以學文-使用-perl-one-liner-進行檔案搜尋取代的流程--sop----三"><!-- raw HTML omitted -->3<!-- raw HTML omitted --> 行有餘力 則以學文: 使用 perl one liner 進行檔案搜尋取代的流程 ( SOP ) ( 三 )</h2>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://jawatech.github.io/" >
+    &copy;  行有餘力，則以學文 2023 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>
