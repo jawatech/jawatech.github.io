@@ -6,7 +6,7 @@
     
     <title>使用perl one liner進行檔案搜尋取代的流程(SOP) | 行有餘力，則以學文</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="description" content=" 1 行有餘力 則以學文: 使用perl one liner進行檔案搜尋取代的流程(SOP) 2 行有餘力 則以學文: 使用 perl one liner 進行檔案搜尋取代的流程(SOP)(二) 3 行有餘力 則以學文: 使用 perl one liner 進行檔案搜尋取代的流程 ( SOP ) ( 三 ) 1 行有餘力 則以學文: 使用perl one liner進行檔案搜尋取代的流程(SOP) 2 行有餘力 則以學文: 使用 perl one liner 進行檔案搜尋取代的流程(SOP)(二) 3 行有餘力 則以學文: 使用 perl one liner 進行檔案搜尋取代的流程 ( SOP ) ( 三 ) ">
+    <meta name="description" content="1 行有餘力 則以學文: 使用perl one liner進行檔案搜尋取代的流程(SOP) 2 行有餘力 則以學文: 使用 perl one liner 進行檔案搜尋取代的流程(SOP)(二) 2.1 67 2.2 67 3 行有餘力 則以學文: 使用 perl one liner 進行檔案搜尋取代的流程 ( SOP ) ( 三 ) 1 行有餘力 則以學文: 使用perl one liner進行檔案搜尋取代的流程(SOP) 第一步是找出要取代的標的，利用 perl -ne &lsquo;print if m/pattern/&rsquo; filename 確認 要做什麼樣的改寫?利用 perl -ne &lsquo;print if s/pattern/pattern2/&rsquo; filename 確認 試試看結果.利用 perl -pe &rsquo;s/pattern/pattern2/&rsquo; filename 確認 加入i參數以進行更動. perl -pi -e &rsquo;s/pattern/pattern2/&rsquo; filename ps.取代部要使用函數呼叫的話，參考 http://www.perlmonks.org/?node_id=638259 ，簡言之就是使用/e選項或 @{[&hellip;]}結構 例如，將srt字幕檔延遲5秒 perl -p -i.">
     <meta name="generator" content="Hugo 0.111.3">
     
     
@@ -30,18 +30,18 @@
     
     
     <meta property="og:title" content="使用perl one liner進行檔案搜尋取代的流程(SOP)" />
-<meta property="og:description" content=" 1 行有餘力 則以學文: 使用perl one liner進行檔案搜尋取代的流程(SOP) 2 行有餘力 則以學文: 使用 perl one liner 進行檔案搜尋取代的流程(SOP)(二) 3 行有餘力 則以學文: 使用 perl one liner 進行檔案搜尋取代的流程 ( SOP ) ( 三 ) 1 行有餘力 則以學文: 使用perl one liner進行檔案搜尋取代的流程(SOP) 2 行有餘力 則以學文: 使用 perl one liner 進行檔案搜尋取代的流程(SOP)(二) 3 行有餘力 則以學文: 使用 perl one liner 進行檔案搜尋取代的流程 ( SOP ) ( 三 ) " />
+<meta property="og:description" content="1 行有餘力 則以學文: 使用perl one liner進行檔案搜尋取代的流程(SOP) 2 行有餘力 則以學文: 使用 perl one liner 進行檔案搜尋取代的流程(SOP)(二) 2.1 67 2.2 67 3 行有餘力 則以學文: 使用 perl one liner 進行檔案搜尋取代的流程 ( SOP ) ( 三 ) 1 行有餘力 則以學文: 使用perl one liner進行檔案搜尋取代的流程(SOP) 第一步是找出要取代的標的，利用 perl -ne &lsquo;print if m/pattern/&rsquo; filename 確認 要做什麼樣的改寫?利用 perl -ne &lsquo;print if s/pattern/pattern2/&rsquo; filename 確認 試試看結果.利用 perl -pe &rsquo;s/pattern/pattern2/&rsquo; filename 確認 加入i參數以進行更動. perl -pi -e &rsquo;s/pattern/pattern2/&rsquo; filename ps.取代部要使用函數呼叫的話，參考 http://www.perlmonks.org/?node_id=638259 ，簡言之就是使用/e選項或 @{[&hellip;]}結構 例如，將srt字幕檔延遲5秒 perl -p -i." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://jawatech.github.io/posts/20230223-perl-1-liner/" /><meta property="article:section" content="posts" />
 
 
 <meta itemprop="name" content="使用perl one liner進行檔案搜尋取代的流程(SOP)">
-<meta itemprop="description" content=" 1 行有餘力 則以學文: 使用perl one liner進行檔案搜尋取代的流程(SOP) 2 行有餘力 則以學文: 使用 perl one liner 進行檔案搜尋取代的流程(SOP)(二) 3 行有餘力 則以學文: 使用 perl one liner 進行檔案搜尋取代的流程 ( SOP ) ( 三 ) 1 行有餘力 則以學文: 使用perl one liner進行檔案搜尋取代的流程(SOP) 2 行有餘力 則以學文: 使用 perl one liner 進行檔案搜尋取代的流程(SOP)(二) 3 行有餘力 則以學文: 使用 perl one liner 進行檔案搜尋取代的流程 ( SOP ) ( 三 ) ">
+<meta itemprop="description" content="1 行有餘力 則以學文: 使用perl one liner進行檔案搜尋取代的流程(SOP) 2 行有餘力 則以學文: 使用 perl one liner 進行檔案搜尋取代的流程(SOP)(二) 2.1 67 2.2 67 3 行有餘力 則以學文: 使用 perl one liner 進行檔案搜尋取代的流程 ( SOP ) ( 三 ) 1 行有餘力 則以學文: 使用perl one liner進行檔案搜尋取代的流程(SOP) 第一步是找出要取代的標的，利用 perl -ne &lsquo;print if m/pattern/&rsquo; filename 確認 要做什麼樣的改寫?利用 perl -ne &lsquo;print if s/pattern/pattern2/&rsquo; filename 確認 試試看結果.利用 perl -pe &rsquo;s/pattern/pattern2/&rsquo; filename 確認 加入i參數以進行更動. perl -pi -e &rsquo;s/pattern/pattern2/&rsquo; filename ps.取代部要使用函數呼叫的話，參考 http://www.perlmonks.org/?node_id=638259 ，簡言之就是使用/e選項或 @{[&hellip;]}結構 例如，將srt字幕檔延遲5秒 perl -p -i.">
 
-<meta itemprop="wordCount" content="56">
+<meta itemprop="wordCount" content="220">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="使用perl one liner進行檔案搜尋取代的流程(SOP)"/>
-<meta name="twitter:description" content=" 1 行有餘力 則以學文: 使用perl one liner進行檔案搜尋取代的流程(SOP) 2 行有餘力 則以學文: 使用 perl one liner 進行檔案搜尋取代的流程(SOP)(二) 3 行有餘力 則以學文: 使用 perl one liner 進行檔案搜尋取代的流程 ( SOP ) ( 三 ) 1 行有餘力 則以學文: 使用perl one liner進行檔案搜尋取代的流程(SOP) 2 行有餘力 則以學文: 使用 perl one liner 進行檔案搜尋取代的流程(SOP)(二) 3 行有餘力 則以學文: 使用 perl one liner 進行檔案搜尋取代的流程 ( SOP ) ( 三 ) "/>
+<meta name="twitter:description" content="1 行有餘力 則以學文: 使用perl one liner進行檔案搜尋取代的流程(SOP) 2 行有餘力 則以學文: 使用 perl one liner 進行檔案搜尋取代的流程(SOP)(二) 2.1 67 2.2 67 3 行有餘力 則以學文: 使用 perl one liner 進行檔案搜尋取代的流程 ( SOP ) ( 三 ) 1 行有餘力 則以學文: 使用perl one liner進行檔案搜尋取代的流程(SOP) 第一步是找出要取代的標的，利用 perl -ne &lsquo;print if m/pattern/&rsquo; filename 確認 要做什麼樣的改寫?利用 perl -ne &lsquo;print if s/pattern/pattern2/&rsquo; filename 確認 試試看結果.利用 perl -pe &rsquo;s/pattern/pattern2/&rsquo; filename 確認 加入i參數以進行更動. perl -pi -e &rsquo;s/pattern/pattern2/&rsquo; filename ps.取代部要使用函數呼叫的話，參考 http://www.perlmonks.org/?node_id=638259 ，簡言之就是使用/e選項或 @{[&hellip;]}結構 例如，將srt字幕檔延遲5秒 perl -p -i."/>
 
 	
   </head>
@@ -120,13 +120,48 @@
 <!-- raw HTML omitted -->
 <ul>
 <li><!-- raw HTML omitted -->1<!-- raw HTML omitted --> <a href="#%E8%A1%8C%E6%9C%89%E9%A4%98%E5%8A%9B-%E5%89%87%E4%BB%A5%E5%AD%B8%E6%96%87-%E4%BD%BF%E7%94%A8perl-one-liner%E9%80%B2%E8%A1%8C%E6%AA%94%E6%A1%88%E6%90%9C%E5%B0%8B%E5%8F%96%E4%BB%A3%E7%9A%84%E6%B5%81%E7%A8%8B--sop">行有餘力 則以學文: 使用perl one liner進行檔案搜尋取代的流程(SOP)</a></li>
-<li><!-- raw HTML omitted -->2<!-- raw HTML omitted --> <a href="#%E8%A1%8C%E6%9C%89%E9%A4%98%E5%8A%9B-%E5%89%87%E4%BB%A5%E5%AD%B8%E6%96%87-%E4%BD%BF%E7%94%A8-perl-one-liner-%E9%80%B2%E8%A1%8C%E6%AA%94%E6%A1%88%E6%90%9C%E5%B0%8B%E5%8F%96%E4%BB%A3%E7%9A%84%E6%B5%81%E7%A8%8B--sop----%E4%BA%8C">行有餘力 則以學文: 使用 perl one liner 進行檔案搜尋取代的流程(SOP)(二)</a></li>
+<li><!-- raw HTML omitted -->2<!-- raw HTML omitted --> <a href="#%E8%A1%8C%E6%9C%89%E9%A4%98%E5%8A%9B-%E5%89%87%E4%BB%A5%E5%AD%B8%E6%96%87-%E4%BD%BF%E7%94%A8-perl-one-liner-%E9%80%B2%E8%A1%8C%E6%AA%94%E6%A1%88%E6%90%9C%E5%B0%8B%E5%8F%96%E4%BB%A3%E7%9A%84%E6%B5%81%E7%A8%8B--sop----%E4%BA%8C">行有餘力 則以學文: 使用 perl one liner 進行檔案搜尋取代的流程(SOP)(二)</a>
+<ul>
+<li><!-- raw HTML omitted -->2.1<!-- raw HTML omitted --> <a href="#67">67</a></li>
+<li><!-- raw HTML omitted -->2.2<!-- raw HTML omitted --> <a href="#67">67</a></li>
+</ul>
+</li>
 <li><!-- raw HTML omitted -->3<!-- raw HTML omitted --> <a href="#%E8%A1%8C%E6%9C%89%E9%A4%98%E5%8A%9B-%E5%89%87%E4%BB%A5%E5%AD%B8%E6%96%87-%E4%BD%BF%E7%94%A8-perl-one-liner-%E9%80%B2%E8%A1%8C%E6%AA%94%E6%A1%88%E6%90%9C%E5%B0%8B%E5%8F%96%E4%BB%A3%E7%9A%84%E6%B5%81%E7%A8%8B--sop----%E4%B8%89">行有餘力 則以學文: 使用 perl one liner 進行檔案搜尋取代的流程 ( SOP ) ( 三 )</a></li>
 </ul>
 <!-- raw HTML omitted -->
 <h2 id="行有餘力-則以學文-使用perl-one-liner進行檔案搜尋取代的流程--sop"><!-- raw HTML omitted -->1<!-- raw HTML omitted --> 行有餘力 則以學文: 使用perl one liner進行檔案搜尋取代的流程(SOP)</h2>
+<ol>
+<li>第一步是找出要取代的標的，利用 perl -ne &lsquo;print if m/pattern/&rsquo; filename 確認 <!-- raw HTML omitted --></li>
+<li>要做什麼樣的改寫?利用 perl -ne &lsquo;print if s/pattern/pattern2/&rsquo; filename 確認 <!-- raw HTML omitted --></li>
+<li>試試看結果.利用 perl -pe &rsquo;s/pattern/pattern2/&rsquo; filename 確認 <!-- raw HTML omitted --></li>
+<li>加入i參數以進行更動. perl -pi -e &rsquo;s/pattern/pattern2/&rsquo; filename <!-- raw HTML omitted --></li>
+</ol>
+<p>ps.取代部要使用函數呼叫的話，參考 <a href="http://www.perlmonks.org/?node_id=638259">http://www.perlmonks.org/?node_id=638259</a> ，簡言之就是使用/e選項或 @{[&hellip;]}結構 <!-- raw HTML omitted --></p>
+<p>例如，將srt字幕檔延遲5秒 <!-- raw HTML omitted --></p>
+<p>perl -p -i.bak -e &ldquo;s/(():():())/@{[sprintf(&rsquo;%02d&rsquo;,int(($4+60*$3+3600*$2+5) \/ 3600))]}:@{[sprintf(&rsquo;%02d&rsquo;,int((($4+60*$3+3600*$2+5) % 3600 \/ 60) ))]}:@{[sprintf \&quot;%02d\&rdquo;,($4+60*$3+3600*$2+5) % 60]}/g;&quot; srt.srt <!-- raw HTML omitted --></p>
 <h2 id="行有餘力-則以學文-使用-perl-one-liner-進行檔案搜尋取代的流程--sop----二"><!-- raw HTML omitted -->2<!-- raw HTML omitted --> 行有餘力 則以學文: 使用 perl one liner 進行檔案搜尋取代的流程(SOP)(二)</h2>
+<p>承接 <a href="#%E8%A1%8C%E6%9C%89%E9%A4%98%E5%8A%9B-%E5%89%87%E4%BB%A5%E5%AD%B8%E6%96%87-%E4%BD%BF%E7%94%A8perl-one-liner%E9%80%B2%E8%A1%8C%E6%AA%94%E6%A1%88%E6%90%9C%E5%B0%8B%E5%8F%96%E4%BB%A3%E7%9A%84%E6%B5%81%E7%A8%8B--sop">行有餘力 則以學文: 使用perl one liner進行檔案搜尋取代的流程(SOP)</a> 一文的第 2 步驟，由於使用 one-liner 時如果要進行取代，沒有什麼空間去做額外的判斷，因此在取代字串很可能必需向前參考所找到的 subgroup 。全寫在一行易讀性的確滿不好，但是這是 perl 的簡潔所必需付出的代價。 <!-- raw HTML omitted --></p>
+<p>原理參考： <!-- raw HTML omitted -->
+<a href="http://www.perlmonks.org/?node_id=687031">http://www.perlmonks.org/?node_id=687031</a> <!-- raw HTML omitted -->
+<a href="http://perldoc.perl.org/perlretut.html#Non-capturing-groupings">http://perldoc.perl.org/perlretut.html#Non-capturing-groupings</a> <!-- raw HTML omitted --></p>
+<p>例如想把文字： <!-- raw HTML omitted --></p>
+<h3 id="67"><!-- raw HTML omitted -->2.1<!-- raw HTML omitted --> 67</h3>
+<p>取代成 <!-- raw HTML omitted --></p>
+<h3 id="67"><!-- raw HTML omitted -->2.2<!-- raw HTML omitted --> 67</h3>
+<p>在 windows 平台上的寫法是像這樣的： <!-- raw HTML omitted --></p>
+<p>perl -ne &ldquo;print if s/^(\*+ +[ ]+)?$/eval q{\&quot;$1:drill:\&rdquo;}/e and defined $1&quot; abc.txt <!-- raw HTML omitted --></p>
+<p>或是更簡潔一點： <!-- raw HTML omitted --></p>
+<p>perl -ne &ldquo;print if s/^(\*+ +[ ]+)?$/q{\&quot;$1:drill:\&rdquo;}/ee and defined $1&quot; abc.txt <!-- raw HTML omitted --></p>
+<p>一樣的道理可推到第 3、4 步，但不用去 test 有沒有發生取代： <!-- raw HTML omitted --></p>
+<p>perl -pe &ldquo;s/^(\*+ +[ ]+)?$/q{\&quot;$1:drill:\&rdquo;}/ee&quot; abc.txt <!-- raw HTML omitted --></p>
+<p>perl -pi -e &ldquo;s/^(\*+ +[ ]+)?$/q{\&quot;$1:drill:\&rdquo;}/ee&quot; abc.txt <!-- raw HTML omitted --></p>
 <h2 id="行有餘力-則以學文-使用-perl-one-liner-進行檔案搜尋取代的流程--sop----三"><!-- raw HTML omitted -->3<!-- raw HTML omitted --> 行有餘力 則以學文: 使用 perl one liner 進行檔案搜尋取代的流程 ( SOP ) ( 三 )</h2>
+<p>承接 <a href="#%E8%A1%8C%E6%9C%89%E9%A4%98%E5%8A%9B-%E5%89%87%E4%BB%A5%E5%AD%B8%E6%96%87-%E4%BD%BF%E7%94%A8perl-one-liner%E9%80%B2%E8%A1%8C%E6%AA%94%E6%A1%88%E6%90%9C%E5%B0%8B%E5%8F%96%E4%BB%A3%E7%9A%84%E6%B5%81%E7%A8%8B--sop">行有餘力 則以學文: 使用perl one liner進行檔案搜尋取代的流程(SOP)</a> 一文，如果要串接多個層次的處理也是沒有問題的。(沒辦法，RE 真的是太好用太強大啦!!) <!-- raw HTML omitted --></p>
+<p>&ldquo;|&rdquo; 這個重新導向算子可以把前面的結果傳給後面，所以可以這樣使用： <!-- raw HTML omitted --></p>
+<p>perl -pe <em>xxxxxxxx</em> abc.txt | perl -ne <em>xxxxxxxxxxxxx</em> &gt; def.txt <!-- raw HTML omitted --></p>
+<p>另外還可以衍生出一種使用的情境，就是資料的過濾，這必需要 -ne 參數搭配上 print 函數，合於條件時才利用 print 輸出以進入下一層處理。 <!-- raw HTML omitted --></p>
+<p>以下這行簡單的 one-liner 可以證明， | 兩側的 perl instance 是同時執行，且輸出入是即時重導的： <!-- raw HTML omitted --></p>
+<p>perl -e &ldquo;$|=1;for($i=1;$i&lt;5;$i++){print \&quot;$i\&quot;;sleep($i);}&quot;|perl -pe &ldquo;print time().\&rdquo;\&rdquo;.($_+1).\&quot;\&quot;&quot; <!-- raw HTML omitted --></p>
 <ul class="pa0">
   
 </ul>
