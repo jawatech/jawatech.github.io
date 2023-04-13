@@ -2,16 +2,21 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://jawatech.github.io/categories/</loc>
+    <loc>https://jawatech.github.io/posts/my-first-post/</loc>
+    <lastmod>2022-11-20T09:03:20-08:00</lastmod>
   </url><url>
     <loc>https://jawatech.github.io/posts/</loc>
+    <lastmod>2022-11-20T09:03:20-08:00</lastmod>
+  </url><url>
+    <loc>https://jawatech.github.io/</loc>
+    <lastmod>2022-11-20T09:03:20-08:00</lastmod>
+  </url><url>
+    <loc>https://jawatech.github.io/categories/</loc>
   </url><url>
     <loc>https://jawatech.github.io/posts/20230224-mermaid-sequencediagram/</loc>
   </url><url>
     <loc>https://jawatech.github.io/tags/</loc>
   </url><url>
     <loc>https://jawatech.github.io/posts/20230223-perl-1-liner/</loc>
-  </url><url>
-    <loc>https://jawatech.github.io/</loc>
   </url>
 </urlset>

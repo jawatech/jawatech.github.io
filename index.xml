@@ -5,7 +5,18 @@
     <link>https://jawatech.github.io/</link>
     <description>Recent content on 行有餘力，則以學文</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-TW</language><atom:link href="https://jawatech.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <language>zh-TW</language>
+    <lastBuildDate>Sun, 20 Nov 2022 09:03:20 -0800</lastBuildDate><atom:link href="https://jawatech.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My First Post</title>
+      <link>https://jawatech.github.io/posts/my-first-post/</link>
+      <pubDate>Sun, 20 Nov 2022 09:03:20 -0800</pubDate>
+      
+      <guid>https://jawatech.github.io/posts/my-first-post/</guid>
+      <description>Introduction This is bold text, and this is emphasized text.
+Visit the Hugo website!</description>
+    </item>
+    
     <item>
       <title>sequenceDiagram–字體顏色由span&gt;fill指定，顯示正常!!</title>
       <link>https://jawatech.github.io/posts/20230224-mermaid-sequencediagram/</link>
