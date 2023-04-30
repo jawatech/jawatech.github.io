@@ -6,14 +6,14 @@
     <description>Recent content in drill on 行有餘力，則以學文</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-TW</language>
-    <lastBuildDate>Tue, 21 Mar 2023 00:00:00 +0800</lastBuildDate><atom:link href="https://jawatech.github.io/tags/drill/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 08 Apr 2023 00:00:00 +0800</lastBuildDate><atom:link href="https://jawatech.github.io/tags/drill/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>blogging</title>
       <link>https://jawatech.github.io/posts/20230223-blog-2-hugo/</link>
-      <pubDate>Tue, 21 Mar 2023 00:00:00 +0800</pubDate>
+      <pubDate>Sat, 08 Apr 2023 00:00:00 +0800</pubDate>
       
       <guid>https://jawatech.github.io/posts/20230223-blog-2-hugo/</guid>
-      <description>1 在 jawatech.github.io 搭建由 org mode 匯出 blog 之參考解決方案 1.1 org2blog/org2blog: Blog from Org mode to WordPress. 1.2 novoid/lazyblorg: Blogging with Org-mode for very lazy people 1.3 bastibe/org-static-blog: A static site generator using org-mode 1.3.1 AlBasmala: Blogging with Emacs &amp;amp; Org-mode (•̀ᴗ•́)و 1.4 Build Your Website with Org Mode - System Crafters 1.5 Blog 的搭建及其特性 1.6 使用 Emacs org-mode + GitHub Pages 来写博客 - Jiayuan&amp;rsquo;s Blog - 开发者头条 1.7 Blogging with org-mode and ox-hugo 1.</description>
+      <description>1 trouble shooting 1.1 為何沒有生成最舊一篇貼文對應的連結? 1.2 Unable to resolve link; aborting: &amp;ldquo;int&amp;rdquo; 1.2.1 如何解决无法解析链接而无法导出的问题 | Ian&amp;rsquo;s Site 1.2.2 org-export-resolve-id-link 1.2.3 解決方案 1.3 org-find-olp: Heading not found on level 1.4 LoveIt 主題 2 在 jawatech.github.io 搭建由 org mode 匯出 blog 之參考解決方案 2.1 org2blog/org2blog: Blog from Org mode to WordPress. 2.2 novoid/lazyblorg: Blogging with Org-mode for very lazy people 2.3 bastibe/org-static-blog: A static site generator using org-mode 2.3.1 AlBasmala: Blogging with Emacs &amp;amp; Org-mode (•̀ᴗ•́)و 2.</description>
     </item>
     
   </channel>

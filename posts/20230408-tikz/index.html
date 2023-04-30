@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>tikz | 行有餘力，則以學文</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="1 babel 1.1 tikz 設定，記得 exports both才能圖碼俱現 1.2 tikz0 可預覽，亦可匯出為 pdf 或 html 1.3 tikz2 1.4 Graph Drawing - PGF/TikZ Manual 1.5 FSM 2 preview / export 2.1 tikz3 2.1.1 not ok 2.2 tikz4 2.3 tikz5 2.3.1 改 ob-latex.el 把 png 改成 svg 2.3.2 set git bash as shell in emacs 似乎沒有影響 2.4 tikz6 預覽時 chemfig 不行，但匯出可 3 Plots of Functions - PGF/TikZ Manual 1 babel 1.1 tikz 設定，記得 exports both才能圖碼俱現 參 Exporting Code Blocks (The Org Manual) ，其它選項有 code, results, none \begin{tikzpicture}[domain=-2:2,samples=100,scale=1.">
+    <meta name="generator" content="Hugo 0.111.3">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="tikz" />
+<meta property="og:description" content="1 babel 1.1 tikz 設定，記得 exports both才能圖碼俱現 1.2 tikz0 可預覽，亦可匯出為 pdf 或 html 1.3 tikz2 1.4 Graph Drawing - PGF/TikZ Manual 1.5 FSM 2 preview / export 2.1 tikz3 2.1.1 not ok 2.2 tikz4 2.3 tikz5 2.3.1 改 ob-latex.el 把 png 改成 svg 2.3.2 set git bash as shell in emacs 似乎沒有影響 2.4 tikz6 預覽時 chemfig 不行，但匯出可 3 Plots of Functions - PGF/TikZ Manual 1 babel 1.1 tikz 設定，記得 exports both才能圖碼俱現 參 Exporting Code Blocks (The Org Manual) ，其它選項有 code, results, none \begin{tikzpicture}[domain=-2:2,samples=100,scale=1." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://jawatech.github.io/posts/20230408-tikz/" /><meta property="article:section" content="posts" />
+
+
+<meta itemprop="name" content="tikz">
+<meta itemprop="description" content="1 babel 1.1 tikz 設定，記得 exports both才能圖碼俱現 1.2 tikz0 可預覽，亦可匯出為 pdf 或 html 1.3 tikz2 1.4 Graph Drawing - PGF/TikZ Manual 1.5 FSM 2 preview / export 2.1 tikz3 2.1.1 not ok 2.2 tikz4 2.3 tikz5 2.3.1 改 ob-latex.el 把 png 改成 svg 2.3.2 set git bash as shell in emacs 似乎沒有影響 2.4 tikz6 預覽時 chemfig 不行，但匯出可 3 Plots of Functions - PGF/TikZ Manual 1 babel 1.1 tikz 設定，記得 exports both才能圖碼俱現 參 Exporting Code Blocks (The Org Manual) ，其它選項有 code, results, none \begin{tikzpicture}[domain=-2:2,samples=100,scale=1.">
+
+<meta itemprop="wordCount" content="398">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="tikz"/>
+<meta name="twitter:description" content="1 babel 1.1 tikz 設定，記得 exports both才能圖碼俱現 1.2 tikz0 可預覽，亦可匯出為 pdf 或 html 1.3 tikz2 1.4 Graph Drawing - PGF/TikZ Manual 1.5 FSM 2 preview / export 2.1 tikz3 2.1.1 not ok 2.2 tikz4 2.3 tikz5 2.3.1 改 ob-latex.el 把 png 改成 svg 2.3.2 set git bash as shell in emacs 似乎沒有影響 2.4 tikz6 預覽時 chemfig 不行，但匯出可 3 Plots of Functions - PGF/TikZ Manual 1 babel 1.1 tikz 設定，記得 exports both才能圖碼俱現 參 Exporting Code Blocks (The Org Manual) ，其它選項有 code, results, none \begin{tikzpicture}[domain=-2:2,samples=100,scale=1."/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        行有餘力，則以學文
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">tikz</h1>
+      
+      <p class="tracked">
+        By <strong>Sigmund Tzeng</strong>
+      </p>
+      
+      
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<ul>
+<li><!-- raw HTML omitted -->1<!-- raw HTML omitted --> <a href="#babel">babel</a>
+<ul>
+<li><!-- raw HTML omitted -->1.1<!-- raw HTML omitted --> <a href="#tikz-%E8%A8%AD%E5%AE%9A-%E8%A8%98%E5%BE%97-exports-both%E6%89%8D%E8%83%BD%E5%9C%96%E7%A2%BC%E4%BF%B1%E7%8F%BE">tikz 設定，記得 exports both才能圖碼俱現</a></li>
+<li><!-- raw HTML omitted -->1.2<!-- raw HTML omitted --> <a href="#tikz0-%E5%8F%AF%E9%A0%90%E8%A6%BD-%E4%BA%A6%E5%8F%AF%E5%8C%AF%E5%87%BA%E7%82%BA-pdf-%E6%88%96-html">tikz0 可預覽，亦可匯出為 pdf 或 html</a></li>
+<li><!-- raw HTML omitted -->1.3<!-- raw HTML omitted --> <a href="#tikz2">tikz2</a></li>
+<li><!-- raw HTML omitted -->1.4<!-- raw HTML omitted --> <a href="#graph-drawing-pgf-tikz-manual">Graph Drawing - PGF/TikZ Manual</a></li>
+<li><!-- raw HTML omitted -->1.5<!-- raw HTML omitted --> <a href="#fsm">FSM</a></li>
+</ul>
+</li>
+<li><!-- raw HTML omitted -->2<!-- raw HTML omitted --> <a href="#preview-export">preview / export</a>
+<ul>
+<li><!-- raw HTML omitted -->2.1<!-- raw HTML omitted --> <a href="#tikz3">tikz3</a>
+<ul>
+<li><!-- raw HTML omitted -->2.1.1<!-- raw HTML omitted --> <a href="#not-ok">not ok</a></li>
+</ul>
+</li>
+<li><!-- raw HTML omitted -->2.2<!-- raw HTML omitted --> <a href="#tikz4">tikz4</a></li>
+<li><!-- raw HTML omitted -->2.3<!-- raw HTML omitted --> <a href="#tikz5">tikz5</a>
+<ul>
+<li><!-- raw HTML omitted -->2.3.1<!-- raw HTML omitted --> <a href="#%E6%94%B9-ob-latex-dot-el-%E6%8A%8A-png-%E6%94%B9%E6%88%90-svg">改 ob-latex.el 把 png 改成 svg</a></li>
+<li><!-- raw HTML omitted -->2.3.2<!-- raw HTML omitted --> <a href="#set-git-bash-as-shell-in-emacs-%E4%BC%BC%E4%B9%8E%E6%B2%92%E6%9C%89%E5%BD%B1%E9%9F%BF">set git bash as shell in emacs 似乎沒有影響</a></li>
+</ul>
+</li>
+<li><!-- raw HTML omitted -->2.4<!-- raw HTML omitted --> <a href="#tikz6">tikz6 <del>預覽時 chemfig 不行，但匯出可</del></a></li>
+</ul>
+</li>
+<li><!-- raw HTML omitted -->3<!-- raw HTML omitted --> <a href="#plots-of-functions-pgf-tikz-manual">Plots of Functions - PGF/TikZ Manual</a></li>
+</ul>
+<!-- raw HTML omitted -->
+<h2 id="babel"><!-- raw HTML omitted -->1<!-- raw HTML omitted --> babel</h2>
+<h3 id="tikz-設定-記得-exports-both才能圖碼俱現"><!-- raw HTML omitted -->1.1<!-- raw HTML omitted --> tikz 設定，記得 exports both才能圖碼俱現</h3>
+<p>參 <a href="https://orgmode.org/manual/Exporting-Code-Blocks.html">Exporting Code Blocks (The Org Manual)</a> ，其它選項有 code, results, none <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#66d9ef">\begin</span>{tikzpicture}[domain=-2:2,samples=100,scale=1.0,&gt;=latex]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\tikzset</span>{bgrid/.style={help lines,color=blue!10,very thin}}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\draw</span><span style="color:#a6e22e">[bgrid]</span> (-1.5,-3.5) grid (7.5,3.5);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\draw</span><span style="color:#a6e22e">[&lt;-&gt;, color=black]</span> (-1.5,0) -- (7.5,0) node[right] {<span style="color:#e6db74">$</span>x<span style="color:#e6db74">$</span>};
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\draw</span><span style="color:#a6e22e">[&lt;-&gt;, color=black]</span> (0,-3.5) -- (0,3.5) node[above] {<span style="color:#e6db74">$</span>y<span style="color:#e6db74">$</span>};
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\foreach</span> <span style="color:#66d9ef">\x</span>/<span style="color:#66d9ef">\xtext</span> in {-1,1,2,3,4,5,6,7}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\draw</span> (<span style="color:#66d9ef">\x</span> cm,1pt) -- (<span style="color:#66d9ef">\x</span> cm,-1pt) node[anchor=north] {<span style="color:#e6db74">$</span>\xtext<span style="color:#e6db74">$</span>};
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\foreach</span> <span style="color:#66d9ef">\y</span>/<span style="color:#66d9ef">\ytext</span> in {-3,-2,-1,1,2,3}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\draw</span> (1pt,<span style="color:#66d9ef">\y</span> cm) -- (-1pt,<span style="color:#66d9ef">\y</span> cm) node[anchor=east] {<span style="color:#e6db74">$</span>\ytext<span style="color:#e6db74">$</span>};
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\draw</span><span style="color:#a6e22e">[thick,color=black,domain=0:7.5,smooth]</span>plot (<span style="color:#66d9ef">\x</span>,{sqrt(<span style="color:#66d9ef">\x</span>)}) node[anchor=south] {<span style="color:#e6db74">$</span>y <span style="color:#f92672">=</span> \sqrt{x}<span style="color:#e6db74">$</span>};
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\draw</span><span style="color:#a6e22e">[dashed,color=black,domain=0:7.5,smooth]</span>plot (<span style="color:#66d9ef">\x</span>,{(-1)*(sqrt(<span style="color:#66d9ef">\x</span>))}) node[anchor=north] {<span style="color:#e6db74">$</span>y <span style="color:#f92672">=</span> <span style="color:#f92672">-</span>\sqrt{x}<span style="color:#e6db74">$</span>};
+</span></span><span style="display:flex;"><span><span style="color:#75715e">%\draw[thick,color=black,domain=-1.5:5.5,samples=3]plot (\****)-2}) node[anchor=south] {$y = {x} - 2$};
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">\filldraw</span><span style="color:#a6e22e">[black]</span> (4,2) circle(2pt) node[anchor=south east] {<span style="color:#e6db74">$</span><span style="color:#f92672">(</span><span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">2</span><span style="color:#f92672">)</span><span style="color:#e6db74">$</span>};
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\filldraw</span><span style="color:#a6e22e">[red]</span> (1,-1) circle(2pt);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\draw</span><span style="color:#a6e22e">[red]</span> (1.5,-1) node[anchor=west] {<span style="color:#e6db74">$</span><span style="color:#f92672">(</span><span style="color:#ae81ff">1</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span><span style="color:#f92672">)</span><span style="color:#e6db74">$</span>};
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\end</span>{tikzpicture}
+</span></span></code></pre></div><p><figure><img src="/ox-hugo/contour0.svg"/>
+</figure>
+ <!-- raw HTML omitted --></p>
+<h3 id="tikz0-可預覽-亦可匯出為-pdf-或-html"><!-- raw HTML omitted -->1.2<!-- raw HTML omitted --> tikz0 可預覽，亦可匯出為 pdf 或 html</h3>
+<p><a href="https://msteamc.github.io/post/set-up-the-tikz-in-emacs-org/">Set up the TikZ in Emacs Org | MSC</a> <!-- raw HTML omitted --></p>
+<p><figure><img src="/ox-hugo/contour1.svg"/>
+</figure>
+ <!-- raw HTML omitted --></p>
+<h3 id="tikz2"><!-- raw HTML omitted -->1.3<!-- raw HTML omitted --> tikz2</h3>
+<p><figure><img src="/ox-hugo/contour2.svg"/>
+</figure>
+ <!-- raw HTML omitted --></p>
+<h3 id="graph-drawing-pgf-tikz-manual"><!-- raw HTML omitted -->1.4<!-- raw HTML omitted --> <a href="https://tikz.dev/gd">Graph Drawing - PGF/TikZ Manual</a></h3>
+<p><figure><img src="/ox-hugo/contour3.svg"/>
+</figure>
+ <!-- raw HTML omitted --></p>
+<h3 id="fsm"><!-- raw HTML omitted -->1.5<!-- raw HTML omitted --> FSM</h3>
+<p><a href="https://tikz.dev/library-automata">Automata Drawing Library - PGF/TikZ Manual</a> <!-- raw HTML omitted --></p>
+<p><figure><img src="/ox-hugo/contour4.svg"/>
+</figure>
+ <!-- raw HTML omitted --></p>
+<h2 id="preview-export"><!-- raw HTML omitted -->2<!-- raw HTML omitted --> preview / export</h2>
+<h3 id="tikz3"><!-- raw HTML omitted -->2.1<!-- raw HTML omitted --> tikz3</h3>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h4 id="not-ok"><!-- raw HTML omitted -->2.1.1<!-- raw HTML omitted --> not ok</h4>
+<!-- raw HTML omitted -->
+<h3 id="tikz4"><!-- raw HTML omitted -->2.2<!-- raw HTML omitted --> tikz4</h3>
+<p>目前預覽或匯出為pdf是ok的，指令/組合鍵為：C-c C-e C-s l o。匯出 html 則只有單行的 latex 能成功 <!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<p><!-- raw HTML omitted --> <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --> <!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h3 id="tikz5"><!-- raw HTML omitted -->2.3<!-- raw HTML omitted --> tikz5</h3>
+<p>For MiKTEX, use the update wizard to install the (latest versions of the) packages called pgf, xcolor, and <!-- raw HTML omitted -->
+xkeyval. 但是預設已經都安裝了 <!-- raw HTML omitted --></p>
+<p>(org-babel-do-load-languages &lsquo;org-babel-load-languages <!-- raw HTML omitted -->
+&lsquo;((latex . t)))                           ;手動加在設定檔中，這使得 babel 可以執行，但仍無正確出圖 <!-- raw HTML omitted --></p>
+<p>(add-to-list &lsquo;org-latex-packages-alist &lsquo;(&quot;&quot; &ldquo;tikz&rdquo; t)) ;這個部分檔頭已經有宣告，沒有必要了 <!-- raw HTML omitted -->
+org-latex-default-packages-alist <!-- raw HTML omitted -->
+org-format-latex-header <!-- raw HTML omitted --></p>
+<p><del>(setq org-latex-create-formula-image-program &lsquo;imagemagick)</del>                 ;dvipng? 目前未安裝 imagemagick <!-- raw HTML omitted --></p>
+<p><a href="https://tex.stackexchange.com/questions/480956/why-are-my-characters-overlapping">tikz pgf - Why are my characters overlapping? - TeX - LaTeX Stack Exchange</a> dvipng 輸出的圖會纏在一起 <!-- raw HTML omitted --></p>
+<p><a href="https://www.reddit.com/r/orgmode/comments/k88b81/using_the_texdvipng_option_exporter_does_not_find/">Using the tex:dvipng option - exporter does not find tikz package : orgmode</a> <!-- raw HTML omitted --></p>
+<p>(setq org-latex-create-formula-image-program &lsquo;dvisvgm) <!-- raw HTML omitted -->
+(setq org-preview-latex-default-process &lsquo;dvisvgm)                                ;dvipng <!-- raw HTML omitted --></p>
+<p>但是檔名必需設為 png ??? 設為 svg 完全無法產生圖檔，是為何??? 可能的說明在以下連結 <!-- raw HTML omitted --></p>
+<p><a href="https://list.orgmode.org/orgmode/86r18vz9ec.fsf@gmail.com/T/">latex block tikz to svg</a> 原作者應為 Edouard Debry，簡單來說就是要改 ob-latex.el <!-- raw HTML omitted --></p>
+<p><a href="https://www.mail-archive.com/search?l=emacs-orgmode@gnu.org&amp;q=subject:%22Re%5C%3A+latex+block+tikz+to+svg%22&amp;o=newest&amp;f=1">subject:&ldquo;Re\: latex block tikz to svg&rdquo;</a> <!-- raw HTML omitted --></p>
+<p><a href="https://copyprogramming.com/howto/inkscape-svg-to-pdflatex-code-example">Pdftex: Inkscape svg to pdflatex code example</a> 這篇寫得亂七八糟，感覺是 ai 寫的 <!-- raw HTML omitted --></p>
+<h4 id="改-ob-latex-dot-el-把-png-改成-svg"><!-- raw HTML omitted -->2.3.1<!-- raw HTML omitted --> 改 ob-latex.el 把 png 改成 svg</h4>
+<pre><code>     ((and (string-suffix-p &quot;.png&quot; out-file) (not imagemagick)) &lt;br/&gt;
+</code></pre>
+<p>改成 <!-- raw HTML omitted -->
+((and (string-suffix-p &ldquo;.svg&rdquo; out-file) (not imagemagick)) <!-- raw HTML omitted --></p>
+<h4 id="set-git-bash-as-shell-in-emacs-似乎沒有影響"><!-- raw HTML omitted -->2.3.2<!-- raw HTML omitted --> <a href="https://gist.github.com/ruiyang/03904ebfcca5f6f8380b0ebc6da2d522">set git bash as shell in emacs</a> 似乎沒有影響</h4>
+<p>(setq binary-process-input t) ;??? <!-- raw HTML omitted -->
+(setq w32-quote-process-args ?\&quot;) ;??? <!-- raw HTML omitted -->
+(setenv &ldquo;SHELL&rdquo; shell-file-name) ;這好像要設? <!-- raw HTML omitted -->
+(setq explicit-shell-file-name &ldquo;C:/Program Files/Git/git-bash.exe&rdquo;) ;原值為nil <!-- raw HTML omitted -->
+(setq explicit-sh-args &lsquo;(&quot;-login&quot; &ldquo;-i&rdquo;)) ;??? <!-- raw HTML omitted --></p>
+<h3 id="tikz6"><!-- raw HTML omitted -->2.4<!-- raw HTML omitted --> tikz6 <del>預覽時 chemfig 不行，但匯出可</del></h3>
+<p><!-- raw HTML omitted --> <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --> <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --> <!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --> <!-- raw HTML omitted --></p>
+<h2 id="plots-of-functions-pgf-tikz-manual"><!-- raw HTML omitted -->3<!-- raw HTML omitted --> <a href="https://tikz.dev/tikz-plots">Plots of Functions - PGF/TikZ Manual</a></h2>
+<p><a href="https://www.bu.edu/math/files/2013/08/tikzpgfmanual.pdf">TikZ and pgf Manual for version 1.18</a></p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://jawatech.github.io/" >
+    &copy;  行有餘力，則以學文 2023 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>
